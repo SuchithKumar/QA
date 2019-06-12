@@ -8,7 +8,6 @@ public class BORDatabase {
 	 * GRPID SUBGRPID SUBID MEMSFX PLANID PRDID PRDCAT CLASSID PRDBUSCAT
 	 * PRDVALCD LOBDID LOBDTYPE
 	 */
-
 	String grpId;
 	String subgrpId;
 	String subId;

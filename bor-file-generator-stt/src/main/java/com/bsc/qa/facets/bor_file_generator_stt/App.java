@@ -46,7 +46,6 @@ public class App {
 		FlatFileWriter ffWriter = new FileSystemFlatFileWriter(file, true);
 		ffWriter.writeRecordList(list);
 		ffWriter.close();
-//		util.getBorAdjustmentRecords(session);
 		
 		if(session.isConnected()){
 			session.close();

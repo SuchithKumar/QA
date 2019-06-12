@@ -12,6 +12,7 @@ import java.util.TimeZone;
 import java.util.concurrent.ThreadLocalRandom;
 
 import com.bsc.qa.facets.bor_file_generator_stt.pojo.AmountFields;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.BorAdjustmentDB;
 
 public class HelperClass {
 
@@ -76,7 +77,7 @@ public class HelperClass {
 		File dir=new File("Output files");
 		if(!dir.exists())
 		dir.mkdir();
-		String borFileName = "FACETS_PCT_AFAGL." + "#" + dd + mm + yy + "." + hh + mn + sc + ".txt";
+		String borFileName = "FACETS_PCT_AFAGL." + "#" + mm + dd + yy + "." + hh + mn + sc + ".txt";
 		return borFileName;
 	}
 	
@@ -92,31 +93,134 @@ public class HelperClass {
 		return dateFormat.format(d).toUpperCase();
 	}
 	
-	public static AmountFields getAmountFields(){
+	public static String getLastYearsDate(){
+		Date d = new Date();
+		Calendar cal = Calendar.getInstance(Locale.US);
+		cal.setTime(d);
+	
+		TimeZone tz = TimeZone.getTimeZone("America/Los_Angeles");
+		cal.setTimeZone(tz);
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-");
+		SimpleDateFormat dateFormat1 = new SimpleDateFormat("yy");
+		String yearString = String.valueOf((Integer.parseInt(dateFormat1.format(d))-1));
+//		System.out.println(dateFormat.format(d).toUpperCase());
+		return dateFormat.format(d).toUpperCase().concat(yearString);
+	}
+	
+	public static AmountFields getAmountFields(BigDecimal billedAmount){
 		AmountFields amountFields = new AmountFields();
 		
-		BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(400, 999 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		//BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(400, 999 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal ingredientCost = billedAmount.divide(new BigDecimal(2)).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal deductible = (new BigDecimal(ThreadLocalRandom.current().nextInt(10, 29 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal copay = (new BigDecimal(ThreadLocalRandom.current().nextInt(10, 29 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal coinsurance = (new BigDecimal(ThreadLocalRandom.current().nextInt(10, 29 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal allowedAmount = billedAmount.multiply((new BigDecimal(0.6))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal deductible = billedAmount.multiply((new BigDecimal(0.2))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal copay = billedAmount.multiply((new BigDecimal(0.1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal coinsurance = billedAmount.multiply((new BigDecimal(0.1))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal claimAmount = ingredientCost.subtract(deductible).subtract(copay).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal clientPrice = billedAmount;
 		BigDecimal bscRevenueAmount = clientPrice.subtract(claimAmount).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal allowedAmount = billedAmount.multiply((new BigDecimal(0.6))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		
+		amountFields.setClaimAmount(String.valueOf(claimAmount));
 		amountFields.setBilledAmount(String.valueOf(billedAmount));
 		amountFields.setDeductible(String.valueOf(deductible));
 		amountFields.setCopay(String.valueOf(copay));
 		amountFields.setCoInsurance(String.valueOf(coinsurance));
-		if(claimAmount.compareTo(new BigDecimal(100)) == -1){
-			amountFields.setClaimAmount(" "+String.valueOf(claimAmount));
-		}else{
-		amountFields.setClaimAmount(String.valueOf(claimAmount));
-		}
 		amountFields.setClientPrice(String.valueOf(clientPrice));
 		amountFields.setBscRevenueAmount(String.valueOf(bscRevenueAmount));
 		amountFields.setAllowedAmount(String.valueOf(allowedAmount));
+		
+//		System.out.println(amountFields);
+		return amountFields;
+	}
+
+	public static AmountFields getAdjustmentAmountFields(BigDecimal billedAmount){
+		AmountFields amountFields = new AmountFields();
+		
+		//BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(400, 999 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		//BigDecimal ingredientCost = billedAmount.divide(new BigDecimal(2)).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal allowedAmount = billedAmount.multiply((new BigDecimal(0.6))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal deductible = billedAmount.multiply((new BigDecimal(0.2))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal copay = billedAmount.multiply((new BigDecimal(0.1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal coinsurance = billedAmount.multiply((new BigDecimal(0.1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal claimAmount = billedAmount.divide(new BigDecimal(2)).setScale(2 , BigDecimal.ROUND_HALF_UP);
+		BigDecimal clientPrice = billedAmount;
+		BigDecimal bscRevenueAmount = claimAmount;
+		
+		amountFields.setClaimAmount(String.valueOf(claimAmount));
+		amountFields.setBilledAmount(String.valueOf(billedAmount));
+		amountFields.setDeductible(String.valueOf(deductible));
+		amountFields.setCopay(String.valueOf(copay));
+		amountFields.setCoInsurance(String.valueOf(coinsurance));
+		amountFields.setClientPrice(String.valueOf(clientPrice));
+		amountFields.setBscRevenueAmount(String.valueOf(bscRevenueAmount));
+		amountFields.setAllowedAmount(String.valueOf(allowedAmount));
+		
+//		System.out.println(amountFields);
+		return amountFields;
+	}
+	
+	public static AmountFields getAdjustmentAmountFieldsScenario3(BigDecimal billedAmount,BorAdjustmentDB adjustmentRecord){
+		AmountFields amountFields = new AmountFields();
+		
+		//BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(400, 999 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		//BigDecimal ingredientCost = billedAmount.divide(new BigDecimal(2)).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal allowedAmount = billedAmount.multiply((new BigDecimal(0.6))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal deductible = billedAmount.multiply((new BigDecimal(0.2))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal copay = billedAmount.multiply((new BigDecimal(0.1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal coinsurance = billedAmount.multiply((new BigDecimal(0.1))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal claimAmount = billedAmount.divide(new BigDecimal(2)).setScale(2 , BigDecimal.ROUND_HALF_UP);
+		BigDecimal clientPrice = billedAmount;
+		BigDecimal bscRevenueAmount = claimAmount;
+		
+		if(adjustmentRecord.getCLM_AMT().compareTo(claimAmount)==1){
+//			System.out.println(adjustmentRecord.getCLM_AMT()+" adjustmentRecord.getCLM_AMT()");
+		amountFields.setClaimAmount(String.valueOf(claimAmount));
+		}else{
+			amountFields.setClaimAmount(String.valueOf(adjustmentRecord.getCLM_AMT()));
+		}
+		if(adjustmentRecord.getBIL_AMT().compareTo(billedAmount)==1){
+//			System.out.println(adjustmentRecord.getBIL_AMT()+" adjustmentRecord.getBIL_AMT()");
+		amountFields.setBilledAmount(String.valueOf(billedAmount));
+		}else{
+			amountFields.setBilledAmount(String.valueOf(adjustmentRecord.getBIL_AMT()));
+		}
+		if(adjustmentRecord.getDED_AMT().compareTo(deductible)==1){
+//			System.out.println(adjustmentRecord.getDED_AMT()+" adjustmentRecord.getDED_AMT()");
+		amountFields.setDeductible(String.valueOf(deductible));
+		}else{
+			amountFields.setDeductible(String.valueOf(adjustmentRecord.getDED_AMT()));
+		}
+		if(adjustmentRecord.getCOPAY_AMT().compareTo(copay)==1){
+//			System.out.println(adjustmentRecord.getCOPAY_AMT()+" adjustmentRecord.getCOPAY_AMT()");
+		amountFields.setCopay(String.valueOf(copay));
+		}else{
+			amountFields.setCopay(String.valueOf(adjustmentRecord.getCOPAY_AMT()));
+		}
+		if(adjustmentRecord.getCOINS_AMT().compareTo(coinsurance)==1){
+//			System.out.println(adjustmentRecord.getCOINS_AMT()+" adjustmentRecord.getCOINS_AMT()");
+		amountFields.setCoInsurance(String.valueOf(coinsurance));
+		}else{
+			amountFields.setCoInsurance(String.valueOf(adjustmentRecord.getCOINS_AMT()));
+		}
+		if(adjustmentRecord.getCLI_PRC_AMT().compareTo(clientPrice)==1){
+//			System.out.println(adjustmentRecord.getCLI_PRC_AMT()+" adjustmentRecord.getCLI_PRC_AMT()");
+		amountFields.setClientPrice(String.valueOf(clientPrice));
+		}else{
+			amountFields.setClientPrice(String.valueOf(adjustmentRecord.getCLI_PRC_AMT()));
+		}
+		if(adjustmentRecord.getBSC_RVNU_AMT().compareTo(bscRevenueAmount)==1){
+//			System.out.println(adjustmentRecord.getBSC_RVNU_AMT()+" adjustmentRecord.getBSC_RVNU_AMT()");
+			amountFields.setBscRevenueAmount(String.valueOf(bscRevenueAmount));
+		}else{
+			amountFields.setBscRevenueAmount(String.valueOf(adjustmentRecord.getBSC_RVNU_AMT()));
+		}
+		if(adjustmentRecord.getALLOW_AMT().compareTo(allowedAmount)==1){
+//			System.out.println(adjustmentRecord.getALLOW_AMT()+" adjustmentRecord.getALLOW_AMT()");
+		amountFields.setAllowedAmount(String.valueOf(allowedAmount));
+		}else{
+			amountFields.setAllowedAmount(String.valueOf(adjustmentRecord.getALLOW_AMT()));
+		}
 		
 //		System.out.println(amountFields);
 		return amountFields;
