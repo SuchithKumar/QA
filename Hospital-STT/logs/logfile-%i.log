@@ -1,0 +1,1 @@
+ERROR | 2019-06-04 14:17 | db.DatabaseQueries - Data Not present in Database with 22-MAY-19java.lang.NullPointerException: No Data Present in the Database

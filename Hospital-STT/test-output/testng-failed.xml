@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.bsc.qa.facets.ffp.test.HospitalTest">
+        <methods>
+          <include name="testFedTaxID"/>
+          <include name="testState"/>
+          <include name="testMedicareNum"/>
+          <include name="closeConnection"/>
+          <include name="testPhoneExtension"/>
+          <include name="afterMethod"/>
+          <include name="testPhone"/>
+          <include name="testSiteID"/>
+          <include name="testParentNPI"/>
+          <include name="testPlanCd"/>
+          <include name="testTaxonomy5"/>
+          <include name="afterSuite"/>
+          <include name="testCity"/>
+          <include name="testTaxonomy7"/>
+          <include name="testNPI"/>
+          <include name="testTaxonomy6"/>
+          <include name="testTaxonomy3"/>
+          <include name="testTaxonomy4"/>
+          <include name="logResult"/>
+          <include name="testAddLine1"/>
+          <include name="getConnection"/>
+          <include name="testHospital"/>
+          <include name="testTermDt"/>
+          <include name="testAddLine2"/>
+          <include name="testEffDt"/>
+          <include name="testTaxonomy2"/>
+          <include name="testZip"/>
+          <include name="testCountyCd"/>
+          <include name="testProduct"/>
+          <include name="testTranstype" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="testProvType"/>
+          <include name="getData"/>
+          <include name="testFax"/>
+          <include name="testTaxonomy1"/>
+        </methods>
+      </class> <!-- com.bsc.qa.facets.ffp.test.HospitalTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
