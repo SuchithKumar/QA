@@ -1,0 +1,329 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>36/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jun 14 18:04:59 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>1 seconds (1644 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 135247071364, {135247071364=com.bsc.qa.facets.afa.pojo.KeywordFile@1d7b27f}, {135247071364=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1f64f5e}, {135247071364=com.bsc.qa.facets.afa.pojo.Demographic@1096b06}</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Class ID for Claim ID : 135247071364 expected [CL58] but found [CL35]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData(KeywordDBValidationTest.java:274)
+	at sun.reflect.GeneratedMethodAccessor31.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace4037267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace4037267'><pre>java.lang.AssertionError: The following asserts failed:
+	Class ID for Claim ID : 135247071364 expected [CL58] but found [CL35]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData(KeywordDBValidationTest.java:274)
+	at sun.reflect.GeneratedMethodAccessor31.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660017, {101993660017=com.bsc.qa.facets.afa.pojo.KeywordFile@186099a}, {101993660017=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@17f816}, {101993660017=com.bsc.qa.facets.afa.pojo.Demographic@1bb0ab5}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660018, {101993660018=com.bsc.qa.facets.afa.pojo.KeywordFile@1cad29}, {101993660018=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@5f7fa9}, {101993660018=com.bsc.qa.facets.afa.pojo.Demographic@188246e}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660019, {101993660019=com.bsc.qa.facets.afa.pojo.KeywordFile@5a54b7}, {101993660019=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1cda7c9}, {101993660019=com.bsc.qa.facets.afa.pojo.Demographic@1f2c3f0}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660020, {101993660020=com.bsc.qa.facets.afa.pojo.KeywordFile@17ad4f3}, {101993660020=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@11158fb}, {101993660020=com.bsc.qa.facets.afa.pojo.Demographic@16bcf87}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660021, {101993660021=com.bsc.qa.facets.afa.pojo.KeywordFile@c7f9b3}, {101993660021=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@10d80c4}, {101993660021=com.bsc.qa.facets.afa.pojo.Demographic@18d7714}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660022, {101993660022=com.bsc.qa.facets.afa.pojo.KeywordFile@a21042}, {101993660022=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@d43929}, {101993660022=com.bsc.qa.facets.afa.pojo.Demographic@93f3d5}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660023, {101993660023=com.bsc.qa.facets.afa.pojo.KeywordFile@26928a}, {101993660023=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1c89d2f}, {101993660023=com.bsc.qa.facets.afa.pojo.Demographic@1cbd8c}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660024, {101993660024=com.bsc.qa.facets.afa.pojo.KeywordFile@2c95ee}, {101993660024=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1dbf9be}, {101993660024=com.bsc.qa.facets.afa.pojo.Demographic@d0ec63}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660027, {101993660027=com.bsc.qa.facets.afa.pojo.KeywordFile@1eb8672}, {101993660027=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@d39a69}, {101993660027=com.bsc.qa.facets.afa.pojo.Demographic@142ee04}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 101993660028, {101993660028=com.bsc.qa.facets.afa.pojo.KeywordFile@17194dc}, {101993660028=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1154f21}, {101993660028=com.bsc.qa.facets.afa.pojo.Demographic@865416}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 112165028956, {112165028956=com.bsc.qa.facets.afa.pojo.KeywordFile@1f2b8d2}, {112165028956=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@4a9d7b}, {112165028956=com.bsc.qa.facets.afa.pojo.Demographic@dc1484}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 118608014693, {118608014693=com.bsc.qa.facets.afa.pojo.KeywordFile@1b5fe30}, {118608014693=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@6fc505}, {118608014693=com.bsc.qa.facets.afa.pojo.Demographic@16be73c}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 121338038973, {121338038973=com.bsc.qa.facets.afa.pojo.KeywordFile@1aaae4c}, {121338038973=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@7bdeef}, {121338038973=com.bsc.qa.facets.afa.pojo.Demographic@16e8f77}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 124928951798, {124928951798=com.bsc.qa.facets.afa.pojo.KeywordFile@1449e8f}, {124928951798=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1e80a5e}, {124928951798=com.bsc.qa.facets.afa.pojo.Demographic@11291e5}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 125161119166, {125161119166=com.bsc.qa.facets.afa.pojo.KeywordFile@1f040ba}, {125161119166=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@a4d397}, {125161119166=com.bsc.qa.facets.afa.pojo.Demographic@ab05ed}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 130593336119, {130593336119=com.bsc.qa.facets.afa.pojo.KeywordFile@3c4c1c}, {130593336119=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@3fbbc6}, {130593336119=com.bsc.qa.facets.afa.pojo.Demographic@1d238b1}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 132252644246, {132252644246=com.bsc.qa.facets.afa.pojo.KeywordFile@16cb754}, {132252644246=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1fe380b}, {132252644246=com.bsc.qa.facets.afa.pojo.Demographic@17d1df8}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 136283971487, {136283971487=com.bsc.qa.facets.afa.pojo.KeywordFile@226788}, {136283971487=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1d98dc5}, {136283971487=com.bsc.qa.facets.afa.pojo.Demographic@159e81b}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 150657012477, {150657012477=com.bsc.qa.facets.afa.pojo.KeywordFile@1cd4ff2}, {150657012477=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@c50f54}, {150657012477=com.bsc.qa.facets.afa.pojo.Demographic@807224}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 152526595808, {152526595808=com.bsc.qa.facets.afa.pojo.KeywordFile@d912a}, {152526595808=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@cdae70}, {152526595808=com.bsc.qa.facets.afa.pojo.Demographic@1f6e406}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 154850284180, {154850284180=com.bsc.qa.facets.afa.pojo.KeywordFile@6f3bae}, {154850284180=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@163987e}, {154850284180=com.bsc.qa.facets.afa.pojo.Demographic@477988}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 161805164954, {161805164954=com.bsc.qa.facets.afa.pojo.KeywordFile@1d69c0f}, {161805164954=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@f9779c}, {161805164954=com.bsc.qa.facets.afa.pojo.Demographic@237b90}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 163912269422, {163912269422=com.bsc.qa.facets.afa.pojo.KeywordFile@31c2ee}, {163912269422=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1d455c9}, {163912269422=com.bsc.qa.facets.afa.pojo.Demographic@1400943}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 168831872526, {168831872526=com.bsc.qa.facets.afa.pojo.KeywordFile@1ff1390}, {168831872526=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@147317}, {168831872526=com.bsc.qa.facets.afa.pojo.Demographic@19d81f3}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 169093584056, {169093584056=com.bsc.qa.facets.afa.pojo.KeywordFile@4c638d}, {169093584056=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@195cd51}, {169093584056=com.bsc.qa.facets.afa.pojo.Demographic@1e698c7}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 170255572295, {170255572295=com.bsc.qa.facets.afa.pojo.KeywordFile@7bbe1a}, {170255572295=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1868997}, {170255572295=com.bsc.qa.facets.afa.pojo.Demographic@112e153}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 171411156835, {171411156835=com.bsc.qa.facets.afa.pojo.KeywordFile@101b1c}, {171411156835=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@304b46}, {171411156835=com.bsc.qa.facets.afa.pojo.Demographic@160e52a}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 172518346310, {172518346310=com.bsc.qa.facets.afa.pojo.KeywordFile@60c416}, {172518346310=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@f37506}, {172518346310=com.bsc.qa.facets.afa.pojo.Demographic@f2e0bd}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 174201883068, {174201883068=com.bsc.qa.facets.afa.pojo.KeywordFile@1410923}, {174201883068=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@d4602a}, {174201883068=com.bsc.qa.facets.afa.pojo.Demographic@1bd2029}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 176188480464, {176188480464=com.bsc.qa.facets.afa.pojo.KeywordFile@8fadb0}, {176188480464=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1515c51}, {176188480464=com.bsc.qa.facets.afa.pojo.Demographic@164b553}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 179876995099, {179876995099=com.bsc.qa.facets.afa.pojo.KeywordFile@13e6d34}, {179876995099=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@44b4a}, {179876995099=com.bsc.qa.facets.afa.pojo.Demographic@afb10e}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 180421040616, {180421040616=com.bsc.qa.facets.afa.pojo.KeywordFile@4a4442}, {180421040616=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@4b900}, {180421040616=com.bsc.qa.facets.afa.pojo.Demographic@73d672}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 192488723848, {192488723848=com.bsc.qa.facets.afa.pojo.KeywordFile@17f9109}, {192488723848=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@161a41a}, {192488723848=com.bsc.qa.facets.afa.pojo.Demographic@103b7f0}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 193967770972, {193967770972=com.bsc.qa.facets.afa.pojo.KeywordFile@19de014}, {193967770972=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@12387c8}, {193967770972=com.bsc.qa.facets.afa.pojo.Demographic@41d037}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 196003869859, {196003869859=com.bsc.qa.facets.afa.pojo.KeywordFile@c77191}, {196003869859=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1d386c3}, {196003869859=com.bsc.qa.facets.afa.pojo.Demographic@42b71d}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.KeywordDBValidationTest<br>Parameters: 197221514411, {197221514411=com.bsc.qa.facets.afa.pojo.KeywordFile@68a5f8}, {197221514411=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@f9bbe}, {197221514411=com.bsc.qa.facets.afa.pojo.Demographic@1c6161d}</td>
+<td></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b</td></tr>
+</table><p>
+</body>
+</html>

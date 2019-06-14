@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+	<parameter name="jdbc_url" value="jdbc:oracle:thin:@UORC398N.DEV.BSCAL.LOCAL:12521:FACN51A" />
+	<parameter name="db_user"  value="MzE1Ml81MDMyOTEwMjEwZXJpaGFteXNjcnVjaWFsMDEyMzI1MjA=" />
+	<parameter name="db_password" value="MzE2Ml81MDMyOTEwMjgxMDJAcmVwb2xldmVEdHJhZmZpYzAxMjMyNjQ4" />
+	
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.bsc.qa.facets.afa.test.KeywordDBValidationTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -21,7 +21,6 @@ public class DatabaseUtil {
 												+fileName
 												+"'");
 		String errorDescription = (String) query.list().get(0);
-//		System.out.println(errorDescription);
 		
 		if (errorDescription.equalsIgnoreCase("ACCEPTED")) {
 			SQLQuery query1 = session.createSQLQuery(queriesMap.get("RecordStatusCodeLine1")

@@ -64,17 +64,6 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 	List<KeywordDB> keywordDBList;
 	List<KeywordFile> keywordFileList, sortedKeywordClaimIdList;
 	public static Map<String, ErrorStatus> testResults = new HashMap<String, ErrorStatus>();
-	ExcelUtil excelUtil;
-	Workbook testReport;
-	Sheet sheet0;
-	CellStyle passstyle;
-	CellStyle failstyle;
-	Font font;
-	Set<String> failed = new HashSet<String>();
-	int rowdata[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-			17, 18 };
-	int testCaseNumber = 1;
-	int nextRecord = 18;
 	public static String keywordFilePath = System.getenv("keywordFilePath");
 	public static String borFilePath = System.getenv("borFilepath");
 	private String bor_filename;
@@ -191,48 +180,48 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		SoftAssert softAssert = new SoftAssert();
 		
 		// Record Type
-		softAssert.assertEquals(keywordTable.get(claimId).getRecord_type(), "EXCL");
+		softAssert.assertEquals(keywordTable.get(claimId).getRecord_type(), "EXCL","Record Type Mismatch for Claim ID :"+claimId);
 
 		// Sequence Number
-		softAssert.assertEquals(keywordTable.get(claimId).getSequence_number(), "01");
+		softAssert.assertEquals(keywordTable.get(claimId).getSequence_number(), "01","Sequence Number for Claim ID :"+claimId);
 
 		// Claim Number
-		softAssert.assertEquals(keywordTable.get(claimId).getClaim_number(), borTable.get(claimId).getClaimNumber());
+		softAssert.assertEquals(keywordTable.get(claimId).getClaim_number(), borTable.get(claimId).getClaimNumber(),"Claim Number  for Claim ID :"+claimId);
 
 		// Line Number
-		softAssert.assertEquals(keywordTable.get(claimId).getLine_number(),	"01");
+		softAssert.assertEquals(keywordTable.get(claimId).getLine_number(),	"01","Line Number for Claim ID :"+claimId);
 
 		// Group ID
-		softAssert.assertEquals(keywordTable.get(claimId).getGroup_id(), borTable.get(claimId).getGroupNumber());
+		softAssert.assertEquals(keywordTable.get(claimId).getGroup_id(), borTable.get(claimId).getGroupNumber(),"Group ID for Claim ID :"+claimId);
 
 		// Subscriber ID
-		softAssert.assertEquals(keywordTable.get(claimId).getSubscriber_id(), borTable.get(claimId).getSubscriberId());
+		softAssert.assertEquals(keywordTable.get(claimId).getSubscriber_id(), borTable.get(claimId).getSubscriberId(),"Subscriber ID for Claim ID :"+claimId);
 
 		// RelationShip Code
-		softAssert.assertEquals(keywordTable.get(claimId).getRelationship_code(), keywordDBTable.get(claimId).getRelationshipCode());
+		softAssert.assertEquals(keywordTable.get(claimId).getRelationship_code(), keywordDBTable.get(claimId).getRelationshipCode(),"RelationShip Code for Claim ID :"+claimId);
 
 		// Member Suffix
-		softAssert.assertEquals(keywordTable.get(claimId).getSubscriber_id(),borTable.get(claimId).getSubscriberId());
+		softAssert.assertEquals(keywordTable.get(claimId).getSubscriber_id(),borTable.get(claimId).getSubscriberId(),"Member Suffix for Claim ID :"+claimId);
 
 		// Plan Category
-		softAssert.assertEquals(keywordTable.get(claimId).getPlan_category(),borTable.get(claimId).getProductCategory());
+		softAssert.assertEquals(keywordTable.get(claimId).getPlan_category(),borTable.get(claimId).getProductCategory(),"Plan Category for Claim ID :"+claimId);
 
 		// Plan ID
-		softAssert.assertEquals(keywordTable.get(claimId).getPlan_id(),borTable.get(claimId).getPlanId());
+		softAssert.assertEquals(keywordTable.get(claimId).getPlan_id(),borTable.get(claimId).getPlanId(),"Plan ID for Claim ID :"+claimId);
 
 		// Class ID
-		softAssert.assertEquals(keywordTable.get(claimId).getClass_id(),borTable.get(claimId).getClassId());
+		softAssert.assertEquals(keywordTable.get(claimId).getClass_id(),borTable.get(claimId).getClassId(),"Class ID for Claim ID :"+claimId);
 
 		// Diagnosis Code Type
-		softAssert.assertEquals(keywordTable.get(claimId).getDiagnosis_code_type(), "");
+		softAssert.assertEquals(keywordTable.get(claimId).getDiagnosis_code_type(), "","Diagnosis Code Type for Claim ID :"+claimId);
 
 		// Procedure Code
-		softAssert.assertEquals(keywordTable.get(claimId).getProcedure_code().trim(), borTable.get(claimId).getProcedureCode().trim());
+		softAssert.assertEquals(keywordTable.get(claimId).getProcedure_code().trim(), borTable.get(claimId).getProcedureCode().trim(),"Procedure Code for Claim ID :"+claimId);
 
 		// Earliest Service Date
 		Date sd = new Date(borTable.get(claimId).getServiceDate());
 		SimpleDateFormat sdf = new SimpleDateFormat("MMddyyyy");
-		softAssert.assertEquals(keywordTable.get(claimId).getEarliest_service_date(), sdf.format(sd));
+		softAssert.assertEquals(keywordTable.get(claimId).getEarliest_service_date(), sdf.format(sd),"Earliest Service Date for Claim ID :"+claimId);
 
 		// Paid Amount
 		Double borAmt = Double.parseDouble(borTable.get(claimId).getClientPrice());
@@ -246,13 +235,13 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		BigDecimal bor = new BigDecimal(borAmt,mc);
 		BigDecimal keyword = new BigDecimal(keywordAmt,mc);
 		
-		softAssert.assertEquals(keyword, bor);
+		softAssert.assertEquals(keyword, bor,"Paid Amount for Claim ID :"+claimId);
 
 		// Accounting Category
-		softAssert.assertEquals(keywordTable.get(claimId).getAccounting_category(), "DRUG");
+		softAssert.assertEquals(keywordTable.get(claimId).getAccounting_category(), "DRUG","Accounting Category for Claim ID :"+claimId);
 
 		// Diagnosis Code
-		softAssert.assertEquals(keywordTable.get(claimId).getDiagnosis_code(),borTable.get(claimId).getDiagnosisCode());
+		softAssert.assertEquals(keywordTable.get(claimId).getDiagnosis_code(),borTable.get(claimId).getDiagnosisCode(),"Diagnosis Code for Claim ID :"+claimId);
 
 		softAssert.assertAll();
 		

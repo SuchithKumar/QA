@@ -50,7 +50,6 @@
 			<groupId>com.bsc.qa</groupId>
 			<artifactId>bqsa-services-core</artifactId>
 			<version>0.0.10-SNAPSHOT</version>
-			
 		</dependency>
 	</dependencies>
 	<build>
