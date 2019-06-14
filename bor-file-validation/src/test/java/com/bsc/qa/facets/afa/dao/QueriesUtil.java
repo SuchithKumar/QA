@@ -31,7 +31,7 @@ public class QueriesUtil {
 		List<String> values = new ArrayList<String>();
 		
 		try (Scanner rowScanner = new Scanner(line)) {
-			rowScanner.useDelimiter(":");
+			rowScanner.useDelimiter("-");
 			while (rowScanner.hasNext()) {
 				values.add(rowScanner.next());	
 			}

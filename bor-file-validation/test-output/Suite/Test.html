@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 13 13:30:39 IST 2019</td>
+<td>Started on:</td><td>Fri Jun 14 18:19:22 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (974 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1080 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,56 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932016, {R45320932016=com.bsc.qa.facets.afa.pojo.BORFile@77b8cf}, {R45320932016=com.bsc.qa.facets.afa.pojo.KeywordFile@4ca0f9}, {R45320932016=com.bsc.qa.facets.afa.pojo.KeywordDB@7ef029}</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Procedure Code for Claim ID :R45320932016 expected [99199] but found [99198]
+	at com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(BorFileValidationTest.java:246)
+	at com.bsc.qa.facets.afa.test.BorFileValidationTest.run(BorFileValidationTest.java:305)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace32028449", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace32028449'><pre>java.lang.AssertionError: The following asserts failed:
+	Procedure Code for Claim ID :R45320932016 expected [99199] but found [99198]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(BorFileValidationTest.java:246)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+	at com.bsc.qa.facets.afa.test.BorFileValidationTest.run(BorFileValidationTest.java:305)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:576)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,45 +125,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932011, {R45320932011=com.bsc.qa.facets.afa.pojo.BORFile@192eaf4}, {R45320932011=com.bsc.qa.facets.afa.pojo.KeywordFile@174e835}, {R45320932011=com.bsc.qa.facets.afa.pojo.KeywordDB@1276732}</td>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932011, {R45320932011=com.bsc.qa.facets.afa.pojo.BORFile@1005f6c}, {R45320932011=com.bsc.qa.facets.afa.pojo.KeywordFile@f0fba8}, {R45320932011=com.bsc.qa.facets.afa.pojo.KeywordDB@5de5a4}</td>
 <td></td>
 <td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
 <tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R12014726173, {R12014726173=com.bsc.qa.facets.afa.pojo.BORFile@be6ca7}, {R12014726173=com.bsc.qa.facets.afa.pojo.KeywordFile@a1bcdc}, {R12014726173=com.bsc.qa.facets.afa.pojo.KeywordDB@159fad4}</td>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R12014726173, {R12014726173=com.bsc.qa.facets.afa.pojo.BORFile@56812e}, {R12014726173=com.bsc.qa.facets.afa.pojo.KeywordFile@76b80a}, {R12014726173=com.bsc.qa.facets.afa.pojo.KeywordDB@b01b12}</td>
 <td></td>
 <td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
 <tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932021, {R45320932021=com.bsc.qa.facets.afa.pojo.BORFile@2a4fff}, {R45320932021=com.bsc.qa.facets.afa.pojo.KeywordFile@c670a6}, {R45320932021=com.bsc.qa.facets.afa.pojo.KeywordDB@1fc684e}</td>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932021, {R45320932021=com.bsc.qa.facets.afa.pojo.BORFile@e6516e}, {R45320932021=com.bsc.qa.facets.afa.pojo.KeywordFile@1e54b40}, {R45320932021=com.bsc.qa.facets.afa.pojo.KeywordDB@1ed0ff3}</td>
 <td></td>
 <td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
 <tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932026, {R45320932026=com.bsc.qa.facets.afa.pojo.BORFile@63d80a}, {R45320932026=com.bsc.qa.facets.afa.pojo.KeywordFile@133ec6e}, {R45320932026=com.bsc.qa.facets.afa.pojo.KeywordDB@15e34c7}</td>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932026, {R45320932026=com.bsc.qa.facets.afa.pojo.BORFile@91490c}, {R45320932026=com.bsc.qa.facets.afa.pojo.KeywordFile@187fff7}, {R45320932026=com.bsc.qa.facets.afa.pojo.KeywordDB@5c7f0b}</td>
 <td></td>
 <td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
 <tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R26609111309, {R26609111309=com.bsc.qa.facets.afa.pojo.BORFile@cf80e7}, {R26609111309=com.bsc.qa.facets.afa.pojo.KeywordFile@2fec27}, {R26609111309=com.bsc.qa.facets.afa.pojo.KeywordDB@10d0ea6}</td>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R26609111309, {R26609111309=com.bsc.qa.facets.afa.pojo.BORFile@ef9aef}, {R26609111309=com.bsc.qa.facets.afa.pojo.KeywordFile@1389053}, {R26609111309=com.bsc.qa.facets.afa.pojo.KeywordDB@1b99216}</td>
 <td></td>
 <td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
 <tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932016, {R45320932016=com.bsc.qa.facets.afa.pojo.BORFile@ea706c}, {R45320932016=com.bsc.qa.facets.afa.pojo.KeywordFile@1d7f8dc}, {R45320932016=com.bsc.qa.facets.afa.pojo.KeywordDB@12bf0e2}</td>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R87750781817, {R87750781817=com.bsc.qa.facets.afa.pojo.BORFile@155b920}, {R87750781817=com.bsc.qa.facets.afa.pojo.KeywordFile@152d38d}, {R87750781817=com.bsc.qa.facets.afa.pojo.KeywordDB@191009c}</td>
 <td></td>
 <td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
 <tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R87750781817, {R87750781817=com.bsc.qa.facets.afa.pojo.BORFile@12518c3}, {R87750781817=com.bsc.qa.facets.afa.pojo.KeywordFile@69561c}, {R87750781817=com.bsc.qa.facets.afa.pojo.KeywordDB@1aa20b3}</td>
+<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932006, {R45320932006=com.bsc.qa.facets.afa.pojo.BORFile@1edc883}, {R45320932006=com.bsc.qa.facets.afa.pojo.KeywordFile@18f4f03}, {R45320932006=com.bsc.qa.facets.afa.pojo.KeywordDB@2f1e9a}</td>
 <td></td>
 <td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
-<tr>
-<td title='com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData()'><b>testAllData</b><br>Test class: com.bsc.qa.facets.afa.test.BorFileValidationTest<br>Parameters: R45320932006, {R45320932006=com.bsc.qa.facets.afa.pojo.BORFile@18fe6ec}, {R45320932006=com.bsc.qa.facets.afa.pojo.KeywordFile@77f0f4}, {R45320932006=com.bsc.qa.facets.afa.pojo.KeywordDB@1b30c92}</td>
-<td></td>
-<td>0</td>
-<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@1211155</td></tr>
+<td>com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233</td></tr>
 </table><p>
 </body>
 </html>

@@ -12,22 +12,19 @@ public class DatabaseUtil {
 	QueriesUtil queryUtil = new QueriesUtil();
 
 	public ErrorStatus getErrorMessage(Session session, String claim_id,String fileName) {
+//		System.out.println("Hereeeeeeeeeeee");
 		queriesMap = queryUtil.queriesMap();
 		String status = "";
 		ErrorStatus errorStatus = new ErrorStatus();
-		SQLQuery query = session.createSQLQuery(queriesMap.get("ErrorDescriptionLine")
-												+ claim_id 
-												+queriesMap.get("ErrorDescriptionLine1")
-												+fileName
-												+"'");
+		SQLQuery query = (SQLQuery) session.createSQLQuery(queriesMap.get("ErrorDescriptionQuery"))
+				.setParameter("clm", claim_id)
+				.setParameter("file", fileName);
 		String errorDescription = (String) query.list().get(0);
 		
 		if (errorDescription.equalsIgnoreCase("ACCEPTED")) {
-			SQLQuery query1 = session.createSQLQuery(queriesMap.get("RecordStatusCodeLine1")
-													 + claim_id
-													 +queriesMap.get("RecordStatusCodeLine2")
-													 +fileName 
-													 +"'");
+			SQLQuery query1 = (SQLQuery) session.createSQLQuery(queriesMap.get("RecordStatusCodeQuery"))
+					.setParameter("clm", claim_id)
+					.setParameter("file", fileName);
 			String recordStatusCode = (String) query1.list().get(0);
 			// If its accepted and status code is p then pass with comments-0$
 			// claim so data not extracted in keyword
