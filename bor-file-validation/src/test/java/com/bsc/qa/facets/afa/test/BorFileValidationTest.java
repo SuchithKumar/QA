@@ -80,9 +80,35 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		String oraclePort = System.getenv("ORACLE_PORT");
 		String oracleDB = System.getenv("ORACLE_DB");
 		String oracleUrl = "jdbc:oracle:thin:@" + oracleServer + ":" + oraclePort + ":" + oracleDB ;
-		bor_filename =borFilePath  + FileReader.getMatchingAndLatestFile(borFilePath, "FACETS_PCT_AFAGL#*.txt").getName();
+		try {
+			bor_filename =borFilePath  + FileReader.getMatchingAndLatestFile(borFilePath, "FACETS_PCT_AFAGL#*.txt").getName();
+		} catch (Exception e1) {
+			logger1.error("Unable to find the Latest BOR File from the given env variable borFilePath"
+					+ borFilePath);
+			logger1.info("Ending test execution...");
+			if (session != null) {
+				logger1.info("Closing DB Connection...");
+				session.close();
+				logger1.info("Succesfully closed DB connection!");
+			}
+			logger1.info("Test execution ended!");
+			System.exit(0);
+		}
 		logger1.info("Working with BOR File --- "+bor_filename);
-		keyword_filename =keywordFilePath+ FileReader.getMatchingAndLatestFile(keywordFilePath, "argus_afa*.txt").getName();
+		try {
+			keyword_filename =keywordFilePath+ FileReader.getMatchingAndLatestFile(keywordFilePath, "argus_afa*.txt").getName();
+		} catch (Exception e1) {
+			logger1.error("Unable to find the Latest keyword File from the given env variable keywordFilePath"
+					+ keywordFilePath);
+			logger1.info("Ending test execution...");
+			if (session != null) {
+				logger1.info("Closing DB Connection...");
+				session.close();
+				logger1.info("Succesfully closed DB connection!");
+			}
+			logger1.info("Test execution ended!");
+			System.exit(0);
+		}
 		logger1.info("Working with Keyword File --- "+keyword_filename);
 		conn.setUsername(oracleUser);
 		conn.setPassword(oraclePassword);
