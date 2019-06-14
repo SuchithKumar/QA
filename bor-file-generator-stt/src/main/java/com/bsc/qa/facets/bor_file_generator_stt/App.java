@@ -30,9 +30,11 @@ public class App {
 		String oraclePassword = decoder.decryptValue(System.getenv("ORACLE_PASSWORD"));
 		String oracleServer = System.getenv("ORACLE_SERVER");
 		String oraclePort = System.getenv("ORACLE_PORT");
+		
 		String oracleDB = System.getenv("ORACLE_DB");
 		String oracleUrl = "jdbc:oracle:thin:@" + oracleServer + ":" + oraclePort + ":" + oracleDB ;
-		
+		String destFolder = System.getenv("BOR_DEST_PATH");
+		System.out.println((new File(destFolder)).isDirectory());
 		Connection conn = new Connection();
 		conn.setUsername(oracleUser);
 		conn.setPassword(oraclePassword);
@@ -42,7 +44,9 @@ public class App {
 		
 		List<BORFile> list = util.getBorFileList(session,util.getBorFileListFromDB(session),util.getBorAdjustmentRecords(session));
 		String filename = list.get(0).getFileName();
-		File file = new File(new File("").getAbsolutePath()+"\\Output files\\"+filename);
+		
+		File file = new File(destFolder+filename);
+		System.out.println(file.getAbsolutePath());
 		FlatFileWriter ffWriter = new FileSystemFlatFileWriter(file, true);
 		ffWriter.writeRecordList(list);
 		ffWriter.close();

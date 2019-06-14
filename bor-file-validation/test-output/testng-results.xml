@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1224" started-at="2019-06-14T04:30:29Z" finished-at="2019-06-14T04:30:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1224" started-at="2019-06-14T04:30:29Z" finished-at="2019-06-14T04:30:30Z">
+      <class name="com.bsc.qa.facets.afa.test.BorFileValidationTest">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getConnection" is-config="true" duration-ms="2876" started-at="2019-06-14T04:30:26Z" finished-at="2019-06-14T04:30:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getConnection -->
+        <test-method status="PASS" signature="getData()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getData" is-config="true" duration-ms="801" started-at="2019-06-14T04:30:29Z" finished-at="2019-06-14T04:30:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="318" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R45320932011]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R45320932011=com.bsc.qa.facets.afa.pojo.BORFile@12ddbab}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R45320932011=com.bsc.qa.facets.afa.pojo.KeywordFile@17ea53a}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R45320932011=com.bsc.qa.facets.afa.pojo.KeywordDB@cb0951}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="2" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R12014726173]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R12014726173=com.bsc.qa.facets.afa.pojo.BORFile@69561c}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R12014726173=com.bsc.qa.facets.afa.pojo.KeywordFile@1aa20b3}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R12014726173=com.bsc.qa.facets.afa.pojo.KeywordDB@3f6148}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="3" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R45320932021]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R45320932021=com.bsc.qa.facets.afa.pojo.BORFile@77f0f4}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R45320932021=com.bsc.qa.facets.afa.pojo.KeywordFile@1b30c92}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R45320932021=com.bsc.qa.facets.afa.pojo.KeywordDB@15351c4}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="4" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R45320932026]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R45320932026=com.bsc.qa.facets.afa.pojo.BORFile@423501}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R45320932026=com.bsc.qa.facets.afa.pojo.KeywordFile@efcf8a}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R45320932026=com.bsc.qa.facets.afa.pojo.KeywordDB@138fc5}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="2" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R26609111309]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R26609111309=com.bsc.qa.facets.afa.pojo.BORFile@95ac9e}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R26609111309=com.bsc.qa.facets.afa.pojo.KeywordFile@4efc1b}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R26609111309=com.bsc.qa.facets.afa.pojo.KeywordDB@19f7aa3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R45320932016]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R45320932016=com.bsc.qa.facets.afa.pojo.BORFile@76b80a}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R45320932016=com.bsc.qa.facets.afa.pojo.KeywordFile@b01b12}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R45320932016=com.bsc.qa.facets.afa.pojo.KeywordDB@14854d6}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="4" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R87750781817]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R87750781817=com.bsc.qa.facets.afa.pojo.BORFile@1e54b40}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R87750781817=com.bsc.qa.facets.afa.pojo.KeywordFile@1ed0ff3}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R87750781817=com.bsc.qa.facets.afa.pojo.KeywordDB@8ffbc2}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-14T04:30:30Z" data-provider="allData" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R45320932006]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R45320932006=com.bsc.qa.facets.afa.pojo.BORFile@187fff7}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R45320932006=com.bsc.qa.facets.afa.pojo.KeywordFile@5c7f0b}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R45320932006=com.bsc.qa.facets.afa.pojo.KeywordDB@1d5c1a0}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="closeConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="closeConnection" is-config="true" duration-ms="5" started-at="2019-06-14T04:30:30Z" finished-at="2019-06-14T04:30:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeConnection -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterSuite" is-config="true" duration-ms="518" started-at="2019-06-14T04:30:30Z" depends-on-methods="com.bsc.qa.facets.afa.test.BorFileValidationTest.closeConnection" finished-at="2019-06-14T04:30:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.bsc.qa.facets.afa.test.BorFileValidationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

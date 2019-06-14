@@ -91,7 +91,7 @@ public class TestScenarios {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println(borfile);
+		System.out.println("Scenario 1 wrote in BOR File");
 		return borfile;
 	}
 
@@ -149,7 +149,7 @@ public class TestScenarios {
 		borfile1.setProcedureCode("99199");
 		borfile1.setHcpcs_id(" ");
 		borfile1.setClaimTransactionType("P");
-		System.out.println(borfile1);
+		System.out.println("Scenario 1 wrote in BOR File");
 		return borfile1;
 	}
 	
@@ -206,7 +206,7 @@ public class TestScenarios {
 		borfile1.setProcedureCode("99199");
 		borfile1.setHcpcs_id(" ");
 		borfile1.setClaimTransactionType("P");
-		System.out.println(borfile1);
+		System.out.println("Scenario 3 wrote in BOR File");
 		return borfile1;
 	}
 	
@@ -262,7 +262,7 @@ public class TestScenarios {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println(borfile);
+		System.out.println("Scenario 4 written in BOR File");
 		return borfile;
 	}
 
@@ -319,7 +319,7 @@ public class TestScenarios {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println(borfile);
+		System.out.println("Scenario 5 written in BOR File");
 		return borfile;
 	}
 
@@ -365,7 +365,6 @@ public class TestScenarios {
 		borAdjustmentFile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
-		System.out.println(borAdjustmentFile);
 		borFileList.add(borAdjustmentFile);
 		
 		BORFile borfile = new BORFile();
@@ -407,7 +406,7 @@ public class TestScenarios {
 		borfile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println(borfile);
+		System.out.println("Scenario 6 written in BOR File");
 		borFileList.add(borfile);
 		
 		return borFileList;
@@ -455,7 +454,6 @@ public class TestScenarios {
 		borAdjustmentFile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
-		System.out.println(borAdjustmentFile);
 		borFileList.add(borAdjustmentFile);
 		
 		BORFile borfile = new BORFile();
@@ -503,7 +501,7 @@ public class TestScenarios {
 		borfile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println(borfile);
+		System.out.println("Scenario 7 written in BOR File");
 		borFileList.add(borfile);
 		
 		return borFileList;
@@ -554,7 +552,6 @@ public class TestScenarios {
 		borAdjustmentFile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
-		System.out.println(borAdjustmentFile);
 		borFileList.add(borAdjustmentFile);
 		
 		return borFileList;
@@ -606,7 +603,7 @@ public class TestScenarios {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println(borfile);
+		System.out.println("Scenario 8 written in BOR File");
 		borFileList.add(borfile);
 		
 		return borFileList;
@@ -654,7 +651,7 @@ public class TestScenarios {
 		borAdjustmentFile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
-		borFileList.add(borAdjustmentFile);
+		System.out.println("Scenario 9 written in BOR File");
 		return borFileList;
 	}
 	
@@ -704,7 +701,7 @@ public class TestScenarios {
 		borAdjustmentFile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("P");
-		borFileList.add(borAdjustmentFile);
+		System.out.println("Scenario 10 written in BOR File");
 		return borFileList;
 	}
 }

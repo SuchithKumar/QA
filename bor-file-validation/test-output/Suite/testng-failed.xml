@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="keyword_filename" value="argus_afa_20190611002858.txt"/>
+    <parameter name="bor_filename" value="FACETS_PCT_AFAGL#061119.115323.txt"/>
+    <classes>
+      <class name="com.bsc.qa.facets.afa.test.BorFileValidationTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="getData"/>
+          <include name="getConnection"/>
+          <include name="testAllData"/>
+          <include name="afterSuite"/>
+          <include name="logResult"/>
+          <include name="closeConnection"/>
+        </methods>
+      </class> <!-- com.bsc.qa.facets.afa.test.BorFileValidationTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

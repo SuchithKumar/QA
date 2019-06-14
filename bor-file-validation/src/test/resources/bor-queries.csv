@@ -1,0 +1,4 @@
+ErrorDescriptionLine:SELECT ERR_DESC FROM FACETS_CUSTOM.ARGUS_BOR_FIL_CUSTM WHERE CLM_NBR='
+ErrorDescriptionLine1:' and FIL_NM='
+RecordStatusCodeLine1:SELECT REC_STS_CD from CU_ARGUS_DBP_AFA_INB_FILE_HIST WHERE CLM_ID='
+RecordStatusCodeLine2:' and FIL_NM='
