@@ -75,6 +75,7 @@ public class KeywordDBValidationTest {
 		conn.setUrl(oracleUrl);
 		try {
 			logger1.info("Connecting to Database...");
+			logger1.info("Establishing DB connection with the URL - "+conn.getUrl());
 			factory = HibernateUtil.createSessionFactory(conn);
 		} catch (Exception e) {
 			logger1.error("Provided invalid database environment variables, Unable to Connect to DB");

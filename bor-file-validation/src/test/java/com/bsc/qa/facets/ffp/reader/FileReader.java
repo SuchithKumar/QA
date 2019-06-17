@@ -201,10 +201,14 @@ public class FileReader {
 		return sortedKeywordDBList;
 	}
 	
-	public static File getMatchingAndLatestFile(String directoryName,String wildcard){
+	public static File getMatchingAndLatestFile(String directoryName,String wildcard) throws Exception{
 		{
 		    File directory = new File(directoryName);
 		    Collection<File> files = FileUtils.listFiles(directory, new WildcardFileFilter(wildcard), null);
+		    if(files.size()==0){
+		    	Exception e = new Exception("No files matching specified pattern -" + wildcard );
+		    	throw new Exception(e);
+		    }
 		    File latestFile = null;
 		    Long lastModified = new Long(0) ;
 		    for (File file : files) {

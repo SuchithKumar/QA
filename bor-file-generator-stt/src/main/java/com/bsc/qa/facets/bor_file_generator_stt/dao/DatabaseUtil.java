@@ -36,7 +36,6 @@ public class DatabaseUtil {
 		borDatabaseList = new ArrayList<BORDatabase>();
 		queriesMap =  queryUtil.queriesMap();
 		SQLQuery query = session.createSQLQuery(queriesMap.get("BorFileListFromDB"));
-//		borDatabaseList = query.list();
 		/*
 		 * GRPID SUBGRPID SUBID MEMSFX PLANID PRDID PRDCAT CLASSID PRDBUSCAT
 		 * PRDVALCD LOBDID LOBDTYPE

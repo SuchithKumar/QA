@@ -149,7 +149,7 @@ public class TestScenarios {
 		borfile1.setProcedureCode("99199");
 		borfile1.setHcpcs_id(" ");
 		borfile1.setClaimTransactionType("P");
-		System.out.println("Scenario 1 wrote in BOR File");
+		System.out.println("Scenario 2 wrote in BOR File");
 		return borfile1;
 	}
 	

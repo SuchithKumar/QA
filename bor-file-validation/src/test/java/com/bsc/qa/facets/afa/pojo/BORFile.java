@@ -287,5 +287,31 @@ public class BORFile {
 	public void setClaimTransactionType(String claimTransactionType) {
 		this.claimTransactionType = claimTransactionType;
 	}
+	@Override
+	public String toString() {
+		return "BORFile     [claimId=" + claimId + ", fileName=" + fileName
+				+ ", vendorName=" + vendorName + ", groupNumber=" + groupNumber
+				+ ", subgroupId=" + subgroupId + ", subscriberId="
+				+ subscriberId + ", personNumber=" + personNumber
+				+ ", claimNumber=" + claimNumber + ", claimVersionNumber="
+				+ claimVersionNumber + ", claimAmount=" + claimAmount
+				+ ", clientPrice=" + clientPrice + ", bscRevenueAmount="
+				+ bscRevenueAmount + ", checkNumber=" + checkNumber
+				+ ", checkDate=" + checkDate + ", serviceDate=" + serviceDate
+				+ ", payeeId=" + payeeId + ", payeeName=" + payeeName
+				+ ", planId=" + planId + ", productId=" + productId
+				+ ", productCategory=" + productCategory + ", classId="
+				+ classId + ", productBusinessCategory="
+				+ productBusinessCategory + ", productValueCode="
+				+ productValueCode + ", lineOfBusinessId=" + lineOfBusinessId
+				+ ", legalEntity=" + legalEntity + ", billedAmount="
+				+ billedAmount + ", allowedAmount=" + allowedAmount
+				+ ", deductibleAmount=" + deductibleAmount
+				+ ", coinsuranceAmount=" + coinsuranceAmount + ", copayAmount="
+				+ copayAmount + ", diagnosisCode=" + diagnosisCode
+				+ ", diagnosisCodeType=" + diagnosisCodeType
+				+ ", procedureCode=" + procedureCode + ", hcpcs_id=" + hcpcs_id
+				+ ", claimTransactionType=" + claimTransactionType + "]";
+	}
 	
 }

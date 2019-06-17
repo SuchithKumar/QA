@@ -1,10 +1,19 @@
 package com.bsc.qa.facets.afa.dao;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
+
+
+
+
+import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 
+import com.bsc.qa.facets.afa.pojo.BORFile;
+import com.bsc.qa.facets.afa.pojo.DatabaseBOR;
 import com.bsc.qa.facets.afa.pojo.ErrorStatus;
 
 public class DatabaseUtil {
@@ -68,6 +77,27 @@ public class DatabaseUtil {
 		}
 		
 		return errorStatus;
+	}
+	
+	public List<DatabaseBOR> getDatabaseBorFileHistRecords(Session session,List<BORFile> borList) throws Exception{
+		List<DatabaseBOR> databaseBorList = new ArrayList<DatabaseBOR>();
+		for (BORFile borFile : borList) {
+			DatabaseBOR databaseBor = new DatabaseBOR();
+			Query query = session.createQuery("from DatabaseBOR D where D.CLM_NBR= :clm and D.FIL_NM= :file and D.CLM_VER_NBR= :version").setParameter("clm", borFile.getClaimNumber()).setParameter("file", borFile.getFileName()).setParameter("version", borFile.getClaimVersionNumber());
+			try 
+			{
+				databaseBor = (DatabaseBOR) query.list().get(0);
+				System.out.println(databaseBor);
+				databaseBorList.add(databaseBor);
+			} catch (Exception e) {
+				databaseBor.setCLM_NBR(borFile.getClaimNumber());
+				databaseBor.setFIL_NM(borFile.getFileName());
+//				System.out.println(databaseBor);
+				databaseBorList.add(databaseBor);
+			}
+		}
+		
+		return databaseBorList;
 	}
 
 }

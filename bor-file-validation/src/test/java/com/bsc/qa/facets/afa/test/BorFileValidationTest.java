@@ -43,6 +43,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.bsc.bqsa.AutomationStringUtilities;
+import com.bsc.qa.facets.afa.dao.DatabaseUtil;
 import com.bsc.qa.facets.afa.pojo.BORFile;
 import com.bsc.qa.facets.afa.pojo.Connection;
 import com.bsc.qa.facets.afa.pojo.ErrorStatus;
@@ -81,8 +82,11 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		String oracleDB = System.getenv("ORACLE_DB");
 		String oracleUrl = "jdbc:oracle:thin:@" + oracleServer + ":" + oraclePort + ":" + oracleDB ;
 		try {
-			bor_filename =borFilePath  + FileReader.getMatchingAndLatestFile(borFilePath, "FACETS_PCT_AFAGL#*.txt").getName();
+			bor_filename =borFilePath  + FileReader.getMatchingAndLatestFile(borFilePath, "FACETS_PCT_AFAGL.#*.txt").getName();//
 		} catch (Exception e1) {
+			if(e1.getMessage().contains("No files matching")){
+				logger1.error(e1.getMessage());
+			}
 			logger1.error("Unable to find the Latest BOR File from the given env variable borFilePath"
 					+ borFilePath);
 			logger1.info("Ending test execution...");
@@ -115,6 +119,7 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		conn.setUrl(oracleUrl);
 		try {
 			logger1.info("Connecting to Database...");
+			logger1.info("Establishing DB connection with the URL - "+conn.getUrl());
 			factory = HibernateUtil.createSessionFactory(conn);
 		} catch (Exception e) {
 			logger1.error( "Provided invalid database environment variables, Unable to Connect to DB");
@@ -135,8 +140,9 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		borFilePath= bor_filename;
 		keywordFilePath= keyword_filename;
 		FileReader fileReader = new FileReader();
+		DatabaseUtil util = new DatabaseUtil();
 		try {
-			borFileList = fileReader.parseBORFile();
+			borFileList =fileReader.parseBORFile();
 		} catch (Exception e) {
 			logger1.error( "Unable to locate BOR File / BOR File does not exist is given file location!");
 			e.printStackTrace();
@@ -150,6 +156,14 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 			}
 			System.exit(0);
 		}
+		
+		try {
+			util.getDatabaseBorFileHistRecords(session, borFileList);
+		} catch (Exception e1) {
+			logger1.info("Something's wrong");
+			e1.printStackTrace();
+		}
+		
 		try {
 			keywordFileList = fileReader.parseKeywordFile();
 		} catch (Exception e) {
