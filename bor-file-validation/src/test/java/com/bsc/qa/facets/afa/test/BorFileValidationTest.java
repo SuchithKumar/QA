@@ -2,6 +2,7 @@ package com.bsc.qa.facets.afa.test;
 
 import static j2html.TagCreator.td;
 import static j2html.TagCreator.tr;
+import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -46,6 +47,7 @@ import com.bsc.bqsa.AutomationStringUtilities;
 import com.bsc.qa.facets.afa.dao.DatabaseUtil;
 import com.bsc.qa.facets.afa.pojo.BORFile;
 import com.bsc.qa.facets.afa.pojo.Connection;
+import com.bsc.qa.facets.afa.pojo.DatabaseBOR;
 import com.bsc.qa.facets.afa.pojo.ErrorStatus;
 import com.bsc.qa.facets.afa.pojo.KeywordDB;
 import com.bsc.qa.facets.afa.pojo.KeywordFile;
@@ -62,6 +64,7 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 	SessionFactory factory;
 	public static Session session;
 	List<BORFile> borFileList, commonClaimIdList;
+	Map<String, DatabaseBOR> borDBMap;
 	List<KeywordDB> keywordDBList;
 	List<KeywordFile> keywordFileList, sortedKeywordClaimIdList;
 	public static Map<String, ErrorStatus> testResults = new HashMap<String, ErrorStatus>();
@@ -98,10 +101,13 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 			logger1.info("Test execution ended!");
 			System.exit(0);
 		}
-		logger1.info("Working with BOR File --- "+bor_filename);
+		logger1.info("Working with BOR File - "+bor_filename);
 		try {
 			keyword_filename =keywordFilePath+ FileReader.getMatchingAndLatestFile(keywordFilePath, "argus_afa*.txt").getName();
 		} catch (Exception e1) {
+			if(e1.getMessage().contains("No files matching")){
+				logger1.error(e1.getMessage());
+			}
 			logger1.error("Unable to find the Latest keyword File from the given env variable keywordFilePath"
 					+ keywordFilePath);
 			logger1.info("Ending test execution...");
@@ -158,7 +164,10 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		}
 		
 		try {
-			util.getDatabaseBorFileHistRecords(session, borFileList);
+			borDBMap = util.getDatabaseBorFileHistRecords(session, borFileList);
+//			for(Map.Entry<String, DatabaseBOR> entry : borDBMap.entrySet()){
+//				System.out.println(entry.getKey());
+//			}
 		} catch (Exception e1) {
 			logger1.info("Something's wrong");
 			e1.printStackTrace();
@@ -324,6 +333,114 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 			data[i][3] = keywordDBTable;
 		}
 
+		return data;
+	}
+	
+	@Test(dataProvider="borToDBData")
+	public void testBorToDBData(String claimId,Hashtable<String,BORFile> borTable,Hashtable<String,DatabaseBOR> databaseBorTable){
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yy");
+//		System.out.println(borTable.get(claimId));
+//		System.out.println(databaseBorTable.get(claimId));
+		SoftAssert softassert = new SoftAssert();
+		BigDecimal claimAmount = databaseBorTable.get(claimId).getCLM_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal clientPrice = databaseBorTable.get(claimId).getCLI_PRC_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal bscRevenueAmount = databaseBorTable.get(claimId).getBSC_RVNU_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal billedAmount = databaseBorTable.get(claimId).getBIL_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal allowedAmount = databaseBorTable.get(claimId).getALLOW_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal deductibleAmount = databaseBorTable.get(claimId).getDED_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal copayAmount = databaseBorTable.get(claimId).getCOPAY_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal coinsAmount = databaseBorTable.get(claimId).getCOINS_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal borclaimAmount 	 =	 new BigDecimal(borTable.get(claimId).getClaimAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal borclientPrice 	=    new BigDecimal(borTable.get(claimId).getClientPrice()).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal borbscRevenueAmount=  new BigDecimal(borTable.get(claimId).getBscRevenueAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal borbilledAmount		=new BigDecimal(borTable.get(claimId).getBilledAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal borallowedAmount 	=new BigDecimal(borTable.get(claimId).getAllowedAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal bordeductibleAmount = new BigDecimal(borTable.get(claimId).getDeductibleAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal borcopayAmount 		=new BigDecimal(borTable.get(claimId).getCopayAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal borcoinsAmount 	=    new BigDecimal(borTable.get(claimId).getCoinsuranceAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);	
+		softassert.assertEquals(borTable.get(claimId).getClaimId(),databaseBorTable.get(claimId).getFICT_CLM_ID(),"FICT_CLM_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getFileName(),databaseBorTable.get(claimId).getFIL_NM(),"FIL_NM mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getVendorName(),databaseBorTable.get(claimId).getVEND_NM(),"VEND_NM mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getGroupNumber(),databaseBorTable.get(claimId).getGRP_NBR(),"GRP_NBR mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getSubgroupId(),databaseBorTable.get(claimId).getSBGRP_ID(),"SBGRP_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getSubscriberId(),databaseBorTable.get(claimId).getSBSCR_ID(),"SBSCR_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getPersonNumber(),databaseBorTable.get(claimId).getPERS_NBR(),"PERS_NBR mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getClaimNumber(),databaseBorTable.get(claimId).getCLM_NBR(),"CLM_NBR() mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getClaimVersionNumber(),databaseBorTable.get(claimId).getCLM_VER_NBR(),"CLM_VER_NBR mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(borclaimAmount),String.valueOf(claimAmount),"CLM_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(borclientPrice),String.valueOf(clientPrice),"CLI_PRC_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(borbscRevenueAmount),String.valueOf(bscRevenueAmount),"BSC_RVNU_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getCheckNumber(),databaseBorTable.get(claimId).getCHK_NBR(),"CHK_NBR mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getCheckDate(),dateFormat.format(databaseBorTable.get(claimId).getCHK_DT()).toUpperCase(),"CHK_DT mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getServiceDate(),dateFormat.format(databaseBorTable.get(claimId).getSVC_DT()).toUpperCase(),"SVC_DT mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getPayeeId(),databaseBorTable.get(claimId).getPAYE_ID(),"PAYE_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getPayeeName(),databaseBorTable.get(claimId).getPAYE_NM(),"PAYE_NM mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getPlanId(),databaseBorTable.get(claimId).getPLN_ID(),"PLN_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getProductId(),databaseBorTable.get(claimId).getPRDCT_ID(),"PRDCT_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getProductCategory(),databaseBorTable.get(claimId).getPRDCT_CATEG_CD(),"PRDCT_CATEG_CD mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getClassId(),databaseBorTable.get(claimId).getCLS_ID(),"CLS_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getProductBusinessCategory(),databaseBorTable.get(claimId).getPRDCT_BUS_CATEG_CD(),"PRDCT_BUS_CATEG_CD mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getProductValueCode(),databaseBorTable.get(claimId).getPRDCT_VAL1_CD(),"PRDCT_VAL1_CD mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getLineOfBusinessId(),databaseBorTable.get(claimId).getLOB_ID(),"LOB_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getLegalEntity(),databaseBorTable.get(claimId).getLGL_ENTY_CD(),"LGL_ENTY_CD mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(borbilledAmount),String.valueOf(billedAmount),"BIL_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(borallowedAmount),String.valueOf(allowedAmount),"ALLOW_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(bordeductibleAmount),String.valueOf(deductibleAmount),"DED_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(borcoinsAmount),String.valueOf(coinsAmount),"COINS_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(String.valueOf(borcopayAmount),String.valueOf(copayAmount),"COPAY_AMT mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getDiagnosisCode(),databaseBorTable.get(claimId).getDIAG_CD(),"DIAG_CD mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getDiagnosisCodeType(),databaseBorTable.get(claimId).getDIAG_TYP_CD(),"DIAG_TYP_CD mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getProcedureCode(),databaseBorTable.get(claimId).getPROC_CD(),"PROC_CD mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getHcpcs_id(),databaseBorTable.get(claimId).getHCPCS_ID(),"HCPCS_ID mismatch for claimID - "+claimId );
+		softassert.assertEquals(borTable.get(claimId).getClaimTransactionType(),databaseBorTable.get(claimId).getCLM_TRANS_TYP_CD(),"CLM_TRANS_TYP_CD mismatch for claimID - "+claimId );
+		
+		softassert.assertAll();
+		
+	}
+	@DataProvider
+	public Object[][] borToDBData() {
+		Hashtable<String, BORFile> borTable = null;
+		Hashtable<String, DatabaseBOR> databaseBorTable = null;
+		FileReader reader = new FileReader();
+		List<BORFile> borList = reader.parseBORFile();
+		Object[][] data = null;
+		try {
+			data = new Object[borList.size()][3];
+		} catch (Exception e) {
+			logger1.trace("No Data to be provided...", e.getCause());
+			if(session.isConnected()){
+				logger1.info( "Closing DB Connection...");
+				logger1.info( "DB Connection Succesfully closed!");
+				session.close();
+				logger1.info( "Ending test exection...");
+			}else{
+				logger1.info( "Ending test exection...");
+			}
+			System.exit(0);
+		}
+
+		for (int i = 0; i < data.length; i++) {
+			borTable = new Hashtable<String, BORFile>();
+			borTable.put(borList.get(i).getClaimNumber().trim()+","+borList.get(i).getClaimVersionNumber().trim(),
+					borList.get(i));
+			databaseBorTable = new Hashtable<String, DatabaseBOR>();
+			DatabaseBOR databaseBor = new DatabaseBOR();
+			try {
+				databaseBor = borDBMap.get(borList.get(i).getClaimNumber().trim()+","+borList.get(i).getClaimVersionNumber().trim());
+				databaseBorTable.put(borList.get(i).getClaimNumber().trim()+","+borList.get(i).getClaimVersionNumber().trim(), databaseBor);
+//				System.out.println("Database BOR - "+databaseBor);
+			} catch (Exception e) {
+				DatabaseBOR adj = new DatabaseBOR();
+				adj.setCLM_NBR((String)borList.get(i).getClaimNumber().trim());
+//				System.out.println("Database BOR - "+adj);
+				databaseBorTable.put((String)borList.get(i).getClaimNumber(), adj);
+			}
+			
+			data[i][0] = borList.get(i).getClaimNumber().trim()+","+borList.get(i).getClaimVersionNumber().trim();
+			data[i][1] = borTable;
+			data[i][2] = databaseBorTable;
+		}
+		
 		return data;
 	}
 	

@@ -1,47 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="37" passed="36">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1644" started-at="2019-06-14T12:34:59Z" finished-at="2019-06-14T12:35:00Z">
+  <suite name="Suite" duration-ms="1046" started-at="2019-06-17T12:46:35Z" finished-at="2019-06-17T12:46:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1644" started-at="2019-06-14T12:34:59Z" finished-at="2019-06-14T12:35:00Z">
+    <test name="Test" duration-ms="1046" started-at="2019-06-17T12:46:35Z" finished-at="2019-06-17T12:46:36Z">
       <class name="com.bsc.qa.facets.afa.test.KeywordDBValidationTest">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="getConnection" is-config="true" duration-ms="1523" started-at="2019-06-14T12:34:57Z" finished-at="2019-06-14T12:34:59Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="getConnection" is-config="true" duration-ms="3676" started-at="2019-06-17T12:46:31Z" finished-at="2019-06-17T12:46:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="setUpData()[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="setUpData" is-config="true" duration-ms="1495" started-at="2019-06-14T12:34:59Z" finished-at="2019-06-14T12:35:00Z">
+        <test-method status="PASS" signature="setUpData()[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="setUpData" is-config="true" duration-ms="955" started-at="2019-06-17T12:46:35Z" finished-at="2019-06-17T12:46:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="8" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660017]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660017=com.bsc.qa.facets.afa.pojo.KeywordFile@186099a}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660017=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@17f816}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660017=com.bsc.qa.facets.afa.pojo.Demographic@1bb0ab5}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="3" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="testAllData" duration-ms="19" started-at="2019-06-17T12:46:36Z" data-provider="allData" finished-at="2019-06-17T12:46:36Z">
           <params>
             <param index="0">
               <value>
@@ -50,867 +24,24 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[{101993660018=com.bsc.qa.facets.afa.pojo.KeywordFile@1cad29}]]>
+                <![CDATA[{101993660018=com.bsc.qa.facets.afa.pojo.KeywordFile@4ea0bd}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[{101993660018=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@5f7fa9}]]>
+                <![CDATA[{101993660018=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@4f5497}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{101993660018=com.bsc.qa.facets.afa.pojo.Demographic@188246e}]]>
+                <![CDATA[{101993660018=com.bsc.qa.facets.afa.pojo.Demographic@f2bbea}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="2" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660019]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660019=com.bsc.qa.facets.afa.pojo.KeywordFile@5a54b7}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660019=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1cda7c9}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660019=com.bsc.qa.facets.afa.pojo.Demographic@1f2c3f0}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660020]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660020=com.bsc.qa.facets.afa.pojo.KeywordFile@17ad4f3}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660020=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@11158fb}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660020=com.bsc.qa.facets.afa.pojo.Demographic@16bcf87}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660021]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660021=com.bsc.qa.facets.afa.pojo.KeywordFile@c7f9b3}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660021=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@10d80c4}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660021=com.bsc.qa.facets.afa.pojo.Demographic@18d7714}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660022]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660022=com.bsc.qa.facets.afa.pojo.KeywordFile@a21042}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660022=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@d43929}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660022=com.bsc.qa.facets.afa.pojo.Demographic@93f3d5}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660023]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660023=com.bsc.qa.facets.afa.pojo.KeywordFile@26928a}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660023=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1c89d2f}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660023=com.bsc.qa.facets.afa.pojo.Demographic@1cbd8c}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660024]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660024=com.bsc.qa.facets.afa.pojo.KeywordFile@2c95ee}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660024=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1dbf9be}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660024=com.bsc.qa.facets.afa.pojo.Demographic@d0ec63}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660027]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660027=com.bsc.qa.facets.afa.pojo.KeywordFile@1eb8672}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660027=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@d39a69}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660027=com.bsc.qa.facets.afa.pojo.Demographic@142ee04}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[101993660028]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{101993660028=com.bsc.qa.facets.afa.pojo.KeywordFile@17194dc}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{101993660028=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1154f21}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{101993660028=com.bsc.qa.facets.afa.pojo.Demographic@865416}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[112165028956]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{112165028956=com.bsc.qa.facets.afa.pojo.KeywordFile@1f2b8d2}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{112165028956=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@4a9d7b}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{112165028956=com.bsc.qa.facets.afa.pojo.Demographic@dc1484}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="2" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[118608014693]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{118608014693=com.bsc.qa.facets.afa.pojo.KeywordFile@1b5fe30}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{118608014693=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@6fc505}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{118608014693=com.bsc.qa.facets.afa.pojo.Demographic@16be73c}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[121338038973]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{121338038973=com.bsc.qa.facets.afa.pojo.KeywordFile@1aaae4c}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{121338038973=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@7bdeef}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{121338038973=com.bsc.qa.facets.afa.pojo.Demographic@16e8f77}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="0" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[124928951798]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{124928951798=com.bsc.qa.facets.afa.pojo.KeywordFile@1449e8f}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{124928951798=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1e80a5e}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{124928951798=com.bsc.qa.facets.afa.pojo.Demographic@11291e5}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="6" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[125161119166]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{125161119166=com.bsc.qa.facets.afa.pojo.KeywordFile@1f040ba}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{125161119166=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@a4d397}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{125161119166=com.bsc.qa.facets.afa.pojo.Demographic@ab05ed}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[130593336119]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{130593336119=com.bsc.qa.facets.afa.pojo.KeywordFile@3c4c1c}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{130593336119=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@3fbbc6}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{130593336119=com.bsc.qa.facets.afa.pojo.Demographic@1d238b1}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="2" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[132252644246]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{132252644246=com.bsc.qa.facets.afa.pojo.KeywordFile@16cb754}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{132252644246=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1fe380b}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{132252644246=com.bsc.qa.facets.afa.pojo.Demographic@17d1df8}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="FAIL" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="3" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[135247071364]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{135247071364=com.bsc.qa.facets.afa.pojo.KeywordFile@1d7b27f}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{135247071364=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1f64f5e}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{135247071364=com.bsc.qa.facets.afa.pojo.Demographic@1096b06}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Class ID for Claim ID : 135247071364 expected [CL58] but found [CL35]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Class ID for Claim ID : 135247071364 expected [CL58] but found [CL35]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at com.bsc.qa.facets.afa.test.KeywordDBValidationTest.testAllData(KeywordDBValidationTest.java:274)
-at sun.reflect.GeneratedMethodAccessor31.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="2" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[136283971487]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{136283971487=com.bsc.qa.facets.afa.pojo.KeywordFile@226788}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{136283971487=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1d98dc5}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{136283971487=com.bsc.qa.facets.afa.pojo.Demographic@159e81b}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="0" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[150657012477]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{150657012477=com.bsc.qa.facets.afa.pojo.KeywordFile@1cd4ff2}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{150657012477=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@c50f54}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{150657012477=com.bsc.qa.facets.afa.pojo.Demographic@807224}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="7" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[152526595808]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{152526595808=com.bsc.qa.facets.afa.pojo.KeywordFile@d912a}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{152526595808=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@cdae70}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{152526595808=com.bsc.qa.facets.afa.pojo.Demographic@1f6e406}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[154850284180]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{154850284180=com.bsc.qa.facets.afa.pojo.KeywordFile@6f3bae}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{154850284180=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@163987e}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{154850284180=com.bsc.qa.facets.afa.pojo.Demographic@477988}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="8" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[161805164954]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{161805164954=com.bsc.qa.facets.afa.pojo.KeywordFile@1d69c0f}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{161805164954=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@f9779c}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{161805164954=com.bsc.qa.facets.afa.pojo.Demographic@237b90}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[163912269422]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{163912269422=com.bsc.qa.facets.afa.pojo.KeywordFile@31c2ee}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{163912269422=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1d455c9}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{163912269422=com.bsc.qa.facets.afa.pojo.Demographic@1400943}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="9" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[168831872526]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{168831872526=com.bsc.qa.facets.afa.pojo.KeywordFile@1ff1390}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{168831872526=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@147317}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{168831872526=com.bsc.qa.facets.afa.pojo.Demographic@19d81f3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="0" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[169093584056]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{169093584056=com.bsc.qa.facets.afa.pojo.KeywordFile@4c638d}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{169093584056=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@195cd51}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{169093584056=com.bsc.qa.facets.afa.pojo.Demographic@1e698c7}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="4" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[170255572295]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{170255572295=com.bsc.qa.facets.afa.pojo.KeywordFile@7bbe1a}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{170255572295=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1868997}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{170255572295=com.bsc.qa.facets.afa.pojo.Demographic@112e153}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[171411156835]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{171411156835=com.bsc.qa.facets.afa.pojo.KeywordFile@101b1c}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{171411156835=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@304b46}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{171411156835=com.bsc.qa.facets.afa.pojo.Demographic@160e52a}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[172518346310]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{172518346310=com.bsc.qa.facets.afa.pojo.KeywordFile@60c416}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{172518346310=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@f37506}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{172518346310=com.bsc.qa.facets.afa.pojo.Demographic@f2e0bd}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[174201883068]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{174201883068=com.bsc.qa.facets.afa.pojo.KeywordFile@1410923}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{174201883068=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@d4602a}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{174201883068=com.bsc.qa.facets.afa.pojo.Demographic@1bd2029}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[176188480464]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{176188480464=com.bsc.qa.facets.afa.pojo.KeywordFile@8fadb0}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{176188480464=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1515c51}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{176188480464=com.bsc.qa.facets.afa.pojo.Demographic@164b553}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[179876995099]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{179876995099=com.bsc.qa.facets.afa.pojo.KeywordFile@13e6d34}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{179876995099=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@44b4a}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{179876995099=com.bsc.qa.facets.afa.pojo.Demographic@afb10e}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="0" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[180421040616]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{180421040616=com.bsc.qa.facets.afa.pojo.KeywordFile@4a4442}]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{180421040616=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@4b900}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{180421040616=com.bsc.qa.facets.afa.pojo.Demographic@73d672}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="testAllData" duration-ms="5" started-at="2019-06-17T12:46:36Z" data-provider="allData" finished-at="2019-06-17T12:46:36Z">
           <params>
             <param index="0">
               <value>
@@ -919,106 +50,158 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{192488723848=com.bsc.qa.facets.afa.pojo.KeywordFile@17f9109}]]>
+                <![CDATA[{192488723848=com.bsc.qa.facets.afa.pojo.KeywordFile@12c8a40}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[{192488723848=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@161a41a}]]>
+                <![CDATA[{192488723848=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@13a053d}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{192488723848=com.bsc.qa.facets.afa.pojo.Demographic@103b7f0}]]>
+                <![CDATA[{192488723848=com.bsc.qa.facets.afa.pojo.Demographic@14243e4}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="4" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="testAllData" duration-ms="1" started-at="2019-06-17T12:46:36Z" data-provider="allData" finished-at="2019-06-17T12:46:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[193967770972]]>
+                <![CDATA[210010233056]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{193967770972=com.bsc.qa.facets.afa.pojo.KeywordFile@19de014}]]>
+                <![CDATA[{210010233056=com.bsc.qa.facets.afa.pojo.KeywordFile@10a9030}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[{193967770972=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@12387c8}]]>
+                <![CDATA[{210010233056=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@67ba60}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{193967770972=com.bsc.qa.facets.afa.pojo.Demographic@41d037}]]>
+                <![CDATA[{210010233056=com.bsc.qa.facets.afa.pojo.Demographic@d57c1b}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="testAllData" duration-ms="2" started-at="2019-06-17T12:46:36Z" data-provider="allData" finished-at="2019-06-17T12:46:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[196003869859]]>
+                <![CDATA[229897264385]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{196003869859=com.bsc.qa.facets.afa.pojo.KeywordFile@c77191}]]>
+                <![CDATA[{229897264385=com.bsc.qa.facets.afa.pojo.KeywordFile@159970a}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[{196003869859=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1d386c3}]]>
+                <![CDATA[{229897264385=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1b5e331}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{196003869859=com.bsc.qa.facets.afa.pojo.Demographic@42b71d}]]>
+                <![CDATA[{229897264385=com.bsc.qa.facets.afa.pojo.Demographic@411d81}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="testAllData" duration-ms="1" started-at="2019-06-14T12:35:00Z" data-provider="allData" finished-at="2019-06-14T12:35:00Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="testAllData" duration-ms="0" started-at="2019-06-17T12:46:36Z" data-provider="allData" finished-at="2019-06-17T12:46:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[197221514411]]>
+                <![CDATA[265393034917]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{197221514411=com.bsc.qa.facets.afa.pojo.KeywordFile@68a5f8}]]>
+                <![CDATA[{265393034917=com.bsc.qa.facets.afa.pojo.KeywordFile@6fd0b9}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[{197221514411=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@f9bbe}]]>
+                <![CDATA[{265393034917=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@13c7bdb}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{197221514411=com.bsc.qa.facets.afa.pojo.Demographic@1c6161d}]]>
+                <![CDATA[{265393034917=com.bsc.qa.facets.afa.pojo.Demographic@1cff1b9}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="closeConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@8ad73b]" name="closeConnection" is-config="true" duration-ms="2" started-at="2019-06-14T12:35:00Z" finished-at="2019-06-14T12:35:00Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="testAllData" duration-ms="3" started-at="2019-06-17T12:46:36Z" data-provider="allData" finished-at="2019-06-17T12:46:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R59173515955]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R59173515955=com.bsc.qa.facets.afa.pojo.KeywordFile@74e47}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R59173515955=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@1a10b5b}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R59173515955=com.bsc.qa.facets.afa.pojo.Demographic@453307}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="testAllData" duration-ms="1" started-at="2019-06-17T12:46:36Z" data-provider="allData" finished-at="2019-06-17T12:46:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R80075499989]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R80075499989=com.bsc.qa.facets.afa.pojo.KeywordFile@eb985d}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R80075499989=com.bsc.qa.facets.afa.pojo.DatabaseKeyword@16b08d}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{R80075499989=com.bsc.qa.facets.afa.pojo.Demographic@9287b1}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllData -->
+        <test-method status="PASS" signature="closeConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.KeywordDBValidationTest@41e737]" name="closeConnection" is-config="true" duration-ms="6" started-at="2019-06-17T12:46:36Z" finished-at="2019-06-17T12:46:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeConnection -->
       </class> <!-- com.bsc.qa.facets.afa.test.KeywordDBValidationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,2 +1,3 @@
 ErrorDescriptionQuery-SELECT ERR_DESC FROM FACETS_CUSTOM.ARGUS_BOR_FIL_CUSTM WHERE CLM_NBR= :clm and FIL_NM= :file
 RecordStatusCodeQuery-SELECT REC_STS_CD from CU_ARGUS_DBP_AFA_INB_FILE_HIST WHERE CLM_ID= :clm and FIL_NM= :file
+DatabaseBORQuery-select * from FACETS_CUSTOM.ARGUS_GL_BOR_FIL_HIST where CLM_NBR= :clm and FIL_NM= :file and CLM_VER_NBR= :version

@@ -8,7 +8,7 @@
           <include name="afterMethod"/>
           <include name="getData"/>
           <include name="getConnection"/>
-          <include name="testAllData" invocation-numbers="5"/>
+          <include name="testBorToDBData" invocation-numbers="4 6 8"/>
           <include name="afterSuite"/>
           <include name="logResult"/>
           <include name="closeConnection"/>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="3" ignored="0" total="19" passed="16">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="2370" started-at="2019-06-17T12:03:16Z" finished-at="2019-06-17T12:03:19Z">
+  <suite name="Suite" duration-ms="1102" started-at="2019-06-18T12:36:51Z" finished-at="2019-06-18T12:36:52Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="2370" started-at="2019-06-17T12:03:16Z" finished-at="2019-06-17T12:03:19Z">
+    <test name="Test" duration-ms="1102" started-at="2019-06-18T12:36:51Z" finished-at="2019-06-18T12:36:52Z">
       <class name="com.bsc.qa.facets.afa.test.BorFileValidationTest">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getConnection" is-config="true" duration-ms="3825" started-at="2019-06-17T12:03:13Z" finished-at="2019-06-17T12:03:16Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getConnection" is-config="true" duration-ms="3178" started-at="2019-06-18T12:36:48Z" finished-at="2019-06-18T12:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="getData()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getData" is-config="true" duration-ms="1941" started-at="2019-06-17T12:03:16Z" finished-at="2019-06-17T12:03:18Z">
+        <test-method status="PASS" signature="getData()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getData" is-config="true" duration-ms="689" started-at="2019-06-18T12:36:51Z" finished-at="2019-06-18T12:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="336" started-at="2019-06-17T12:03:18Z" data-provider="allData" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="265" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -29,19 +29,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[{R29897264385=com.bsc.qa.facets.afa.pojo.KeywordFile@1eddc56}]]>
+                <![CDATA[{R29897264385=com.bsc.qa.facets.afa.pojo.KeywordFile@1f460bb}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{R29897264385=com.bsc.qa.facets.afa.pojo.KeywordDB@1b663b3}]]>
+                <![CDATA[{R29897264385=com.bsc.qa.facets.afa.pojo.KeywordDB@a1923a}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="2" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="2" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -52,7 +52,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-17T12:03:19Z" data-provider="allData" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -77,19 +77,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[{R92488723848=com.bsc.qa.facets.afa.pojo.KeywordFile@6fce47}]]>
+                <![CDATA[{R92488723848=com.bsc.qa.facets.afa.pojo.KeywordFile@620d8e}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{R92488723848=com.bsc.qa.facets.afa.pojo.KeywordDB@1c64cfe}]]>
+                <![CDATA[{R92488723848=com.bsc.qa.facets.afa.pojo.KeywordDB@3f3558}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -100,7 +100,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -111,7 +111,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="4" started-at="2019-06-17T12:03:19Z" data-provider="allData" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -125,41 +125,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[{R80075499989=com.bsc.qa.facets.afa.pojo.KeywordFile@18f8a80}]]>
+                <![CDATA[{R80075499989=com.bsc.qa.facets.afa.pojo.KeywordFile@24686b}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{R80075499989=com.bsc.qa.facets.afa.pojo.KeywordDB@11c0397}]]>
+                <![CDATA[{R80075499989=com.bsc.qa.facets.afa.pojo.KeywordDB@a94d6a}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-17T12:03:19Z" data-provider="allData" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -173,19 +151,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[{R59173515955=com.bsc.qa.facets.afa.pojo.KeywordFile@da0432}]]>
+                <![CDATA[{R59173515955=com.bsc.qa.facets.afa.pojo.KeywordFile@78fcf5}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{R59173515955=com.bsc.qa.facets.afa.pojo.KeywordDB@211fd0}]]>
+                <![CDATA[{R59173515955=com.bsc.qa.facets.afa.pojo.KeywordDB@16febdc}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -196,7 +174,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -207,7 +185,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-17T12:03:19Z" data-provider="allData" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="3" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -221,19 +199,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[{R01993660018=com.bsc.qa.facets.afa.pojo.KeywordFile@188ffeb}]]>
+                <![CDATA[{R01993660018=com.bsc.qa.facets.afa.pojo.KeywordFile@100f14a}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{R01993660018=com.bsc.qa.facets.afa.pojo.KeywordDB@7c28c1}]]>
+                <![CDATA[{R01993660018=com.bsc.qa.facets.afa.pojo.KeywordDB@186099a}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -244,7 +222,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-17T12:03:19Z" data-provider="allData" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -258,30 +258,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[{R10010233056=com.bsc.qa.facets.afa.pojo.KeywordFile@103bf3c}]]>
+                <![CDATA[{R10010233056=com.bsc.qa.facets.afa.pojo.KeywordFile@88b5c5}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{R10010233056=com.bsc.qa.facets.afa.pojo.KeywordDB@cf5a97}]]>
+                <![CDATA[{R10010233056=com.bsc.qa.facets.afa.pojo.KeywordDB@48ed58}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -292,18 +281,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-17T12:03:19Z" data-provider="allData" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -317,30 +295,19 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[{R65393034917=com.bsc.qa.facets.afa.pojo.KeywordFile@15a69a1}]]>
+                <![CDATA[{R65393034917=com.bsc.qa.facets.afa.pojo.KeywordFile@1745f40}]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[{R65393034917=com.bsc.qa.facets.afa.pojo.KeywordDB@11abd11}]]>
+                <![CDATA[{R65393034917=com.bsc.qa.facets.afa.pojo.KeywordDB@1673f68}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <params>
             <param index="0">
               <value>
@@ -351,11 +318,677 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="closeConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="closeConnection" is-config="true" duration-ms="5" started-at="2019-06-17T12:03:19Z" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testAllData(java.lang.String,java.util.Hashtable,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAllData status=SUCCESS method=BorFileValidationTest.testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[229897264385,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{229897264385,00=BORFile     [claimId=R29897264385, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=W0002709, subgroupId=1000, subscriberId=906470213, personNumber=00, claimNumber=229897264385, claimVersionNumber=00, claimAmount=91.80, clientPrice=459.00, bscRevenueAmount=367.20, checkNumber=3003834, checkDate=17-JUN-19, serviceDate=17-JUN-19, payeeId=5660584, payeeName=OMNI FAMILY HEALTH 3, planId=PPOX0002, productId=M0017675, productCategory=M, classId=100A, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=459.00, allowedAmount=275.40, deductibleAmount=91.80, coinsuranceAmount=45.90, copayAmount=45.90, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{229897264385,00=DatabaseBOR [FICT_CLM_ID=R29897264385, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=W0002709, SBGRP_ID=1000, SBSCR_ID=906470213, PERS_NBR=00, CLM_NBR=229897264385, CLM_VER_NBR=00, CLM_AMT=91.8, CLI_PRC_AMT=459, BSC_RVNU_AMT=367.2, CHK_NBR=3003834, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-06-17 00:00:00.0, PAYE_ID=5660584, PAYE_NM=OMNI FAMILY HEALTH 3, PLN_ID=PPOX0002, PRDCT_ID=M0017675, PRDCT_CATEG_CD=M, CLS_ID=100A, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=459, ALLOW_AMT=275.4, DED_AMT=91.8, COINS_AMT=45.9, COPAY_AMT=45.9, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8190]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[229897264385,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{229897264385,00=BORFile     [claimId=R29897264385, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=W0002709, subgroupId=1000, subscriberId=906470213, personNumber=00, claimNumber=229897264385, claimVersionNumber=00, claimAmount=91.80, clientPrice=459.00, bscRevenueAmount=367.20, checkNumber=3003834, checkDate=17-JUN-19, serviceDate=17-JUN-19, payeeId=5660584, payeeName=OMNI FAMILY HEALTH 3, planId=PPOX0002, productId=M0017675, productCategory=M, classId=100A, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=459.00, allowedAmount=275.40, deductibleAmount=91.80, coinsuranceAmount=45.90, copayAmount=45.90, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{229897264385,00=DatabaseBOR [FICT_CLM_ID=R29897264385, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=W0002709, SBGRP_ID=1000, SBSCR_ID=906470213, PERS_NBR=00, CLM_NBR=229897264385, CLM_VER_NBR=00, CLM_AMT=91.8, CLI_PRC_AMT=459, BSC_RVNU_AMT=367.2, CHK_NBR=3003834, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-06-17 00:00:00.0, PAYE_ID=5660584, PAYE_NM=OMNI FAMILY HEALTH 3, PLN_ID=PPOX0002, PRDCT_ID=M0017675, PRDCT_CATEG_CD=M, CLS_ID=100A, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=459, ALLOW_AMT=275.4, DED_AMT=91.8, COINS_AMT=45.9, COPAY_AMT=45.9, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8190]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[210010233056,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{210010233056,00=BORFile     [claimId=R10010233056, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=W0051457, subgroupId=1000, subscriberId=908470423, personNumber=00, claimNumber=210010233056, claimVersionNumber=00, claimAmount=886.00, clientPrice=886.00, bscRevenueAmount=0.00, checkNumber=7520658, checkDate=17-JUN-19, serviceDate=17-JUN-19, payeeId=0517459, payeeName=RITE AID PHARMACY 05, planId=PPOX0001, productId=M0018671, productCategory=M, classId=1000, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=886.00, allowedAmount=531.60, deductibleAmount=177.20, coinsuranceAmount=88.60, copayAmount=88.60, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{210010233056,00=DatabaseBOR [FICT_CLM_ID=R10010233056, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=W0051457, SBGRP_ID=1000, SBSCR_ID=908470423, PERS_NBR=00, CLM_NBR=210010233056, CLM_VER_NBR=00, CLM_AMT=886, CLI_PRC_AMT=886, BSC_RVNU_AMT=0, CHK_NBR=7520658, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-06-17 00:00:00.0, PAYE_ID=0517459, PAYE_NM=RITE AID PHARMACY 05, PLN_ID=PPOX0001, PRDCT_ID=M0018671, PRDCT_CATEG_CD=M, CLS_ID=1000, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=886, ALLOW_AMT=531.6, DED_AMT=177.2, COINS_AMT=88.6, COPAY_AMT=88.6, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8188]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[232790596883,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{232790596883,00=BORFile     [claimId=R32790596883, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=W0051414, subgroupId=1001, subscriberId=903780783, personNumber=00, claimNumber=232790596883, claimVersionNumber=00, claimAmount=0.00, clientPrice=441.00, bscRevenueAmount=441.00, checkNumber=4882521, checkDate=17-JUN-19, serviceDate=17-JUN-19, payeeId=4408705, payeeName=LOWE'S DRUGS, planId=PPOX0002, productId=M0018597, productCategory=M, classId=1000, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=441.00, allowedAmount=264.60, deductibleAmount=88.20, coinsuranceAmount=44.10, copayAmount=44.10, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{232790596883,00=DatabaseBOR [FICT_CLM_ID=R32790596883, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=W0051414, SBGRP_ID=1001, SBSCR_ID=903780783, PERS_NBR=00, CLM_NBR=232790596883, CLM_VER_NBR=00, CLM_AMT=0, CLI_PRC_AMT=441, BSC_RVNU_AMT=441, CHK_NBR=4882521, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-06-17 00:00:00.0, PAYE_ID=4408705, PAYE_NM=LOWE'S DRUGS, PLN_ID=PPOX0002, PRDCT_ID=M0018597, PRDCT_CATEG_CD=M, CLS_ID=1000, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=441, ALLOW_AMT=264.6, DED_AMT=88.2, COINS_AMT=44.1, COPAY_AMT=44.1, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8191]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[280843729288,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{280843729288,00=BORFile     [claimId=R80843729288, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=W0051639, subgroupId=1000, subscriberId=909814385, personNumber=00, claimNumber=280843729288, claimVersionNumber=00, claimAmount=126.40, clientPrice=632.00, bscRevenueAmount=505.60, checkNumber=2140091, checkDate=17-JUN-18, serviceDate=17-JUN-18, payeeId=5621188, payeeName=CVS PHARMACY 08895, planId=PPOX0004, productId=M0018834, productCategory=M, classId=1000, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=632.00, allowedAmount=379.20, deductibleAmount=126.40, coinsuranceAmount=63.20, copayAmount=63.20, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{280843729288=DatabaseBOR [FICT_CLM_ID=null, FIL_NM=null, VEND_NM=null, GRP_NBR=null, SBGRP_ID=null, SBSCR_ID=null, PERS_NBR=null, CLM_NBR=280843729288, CLM_VER_NBR=null, CLM_AMT=null, CLI_PRC_AMT=null, BSC_RVNU_AMT=null, CHK_NBR=null, CHK_DT=null, SVC_DT=null, PAYE_ID=null, PAYE_NM=null, PLN_ID=null, PRDCT_ID=null, PRDCT_CATEG_CD=null, CLS_ID=null, PRDCT_BUS_CATEG_CD=null, PRDCT_VAL1_CD=null, LOB_ID=null, LGL_ENTY_CD=null, BIL_AMT=null, ALLOW_AMT=null, DED_AMT=null, COINS_AMT=null, COPAY_AMT=null, DIAG_CD=null, DIAG_TYP_CD=null, PROC_CD=null, HCPCS_ID=null, CLM_TRANS_TYP_CD=null, ERR_CD=null, ERR_DESC=null, SEQ_KEY=null]}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(BorFileValidationTest.java:345)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+at com.bsc.qa.facets.afa.test.BorFileValidationTest.run(BorFileValidationTest.java:462)
+at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:576)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="4" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=FAILURE method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[265393034917,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{265393034917,00=BORFile     [claimId=R65393034917, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=W0051645, subgroupId=1000, subscriberId=906623120, personNumber=00, claimNumber=265393034917, claimVersionNumber=00, claimAmount=150.60, clientPrice=753.00, bscRevenueAmount=602.40, checkNumber=8687524, checkDate=17-JUN-19, serviceDate=17-JUN-19, payeeId=5619943, payeeName=CVS PHARMACY 09627, planId=PPOX0003, productId=M0018970, productCategory=M, classId=1001, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=753.00, allowedAmount=451.80, deductibleAmount=150.60, coinsuranceAmount=75.30, copayAmount=75.30, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{265393034917,00=DatabaseBOR [FICT_CLM_ID=R65393034917, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=W0051645, SBGRP_ID=1000, SBSCR_ID=906623120, PERS_NBR=00, CLM_NBR=265393034917, CLM_VER_NBR=00, CLM_AMT=150.6, CLI_PRC_AMT=753, BSC_RVNU_AMT=602.4, CHK_NBR=8687524, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-06-17 00:00:00.0, PAYE_ID=5619943, PAYE_NM=CVS PHARMACY 09627, PLN_ID=PPOX0003, PRDCT_ID=M0018970, PRDCT_CATEG_CD=M, CLS_ID=1001, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=753, ALLOW_AMT=451.8, DED_AMT=150.6, COINS_AMT=75.3, COPAY_AMT=75.3, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8192]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="4" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[101993660018,01]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{101993660018,01=BORFile     [claimId=R01993660018, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=GPIPDR06, subgroupId=SG06, subscriberId=723436635, personNumber=00, claimNumber=101993660018, claimVersionNumber=01, claimAmount=-106.82, clientPrice=-569.00, bscRevenueAmount=-462.18, checkNumber=2019918, checkDate=17-JUN-19, serviceDate=14-APR-19, payeeId=0107777, payeeName=EXPO PHARMACY, planId=PPOX0001, productId=MRX07098, productCategory=M, classId=CL06, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=-569.00, allowedAmount=-345.00, deductibleAmount=-26.25, coinsuranceAmount=-23.65, copayAmount=-21.22, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=A]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{101993660018,01=DatabaseBOR [FICT_CLM_ID=R01993660018, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=GPIPDR06, SBGRP_ID=SG06, SBSCR_ID=723436635, PERS_NBR=00, CLM_NBR=101993660018, CLM_VER_NBR=01, CLM_AMT=117, CLI_PRC_AMT=-569, BSC_RVNU_AMT=-462.18, CHK_NBR=2019918, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-04-14 00:00:00.0, PAYE_ID=0107777, PAYE_NM=EXPO PHARMACY, PLN_ID=PPOX0001, PRDCT_ID=MRX07098, PRDCT_CATEG_CD=M, CLS_ID=CL06, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=-569, ALLOW_AMT=-345, DED_AMT=-26.25, COINS_AMT=-23.65, COPAY_AMT=-21.22, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=A, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8184]}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+CLM_AMT mismatch for claimID - 101993660018,01 expected [117.00] but found [-106.82]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+CLM_AMT mismatch for claimID - 101993660018,01 expected [117.00] but found [-106.82]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(BorFileValidationTest.java:397)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+at com.bsc.qa.facets.afa.test.BorFileValidationTest.run(BorFileValidationTest.java:462)
+at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:576)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=FAILURE method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="6" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[101993660018,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{101993660018,00=BORFile     [claimId=R01993660018, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=GPIPDR06, subgroupId=SG06, subscriberId=723436635, personNumber=00, claimNumber=101993660018, claimVersionNumber=00, claimAmount=117.00, clientPrice=585.00, bscRevenueAmount=468.00, checkNumber=7858617, checkDate=17-JUN-19, serviceDate=14-APR-19, payeeId=0107777, payeeName=EXPO PHARMACY, planId=PPOX0001, productId=MRX07098, productCategory=M, classId=CL06, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=585.00, allowedAmount=351.00, deductibleAmount=117.00, coinsuranceAmount=58.50, copayAmount=58.50, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{101993660018,00=DatabaseBOR [FICT_CLM_ID=R01993660018, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=GPIPDR06, SBGRP_ID=SG06, SBSCR_ID=723436635, PERS_NBR=00, CLM_NBR=101993660018, CLM_VER_NBR=00, CLM_AMT=117, CLI_PRC_AMT=585, BSC_RVNU_AMT=468, CHK_NBR=7858617, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-04-14 00:00:00.0, PAYE_ID=0107777, PAYE_NM=EXPO PHARMACY, PLN_ID=PPOX0001, PRDCT_ID=MRX07098, PRDCT_CATEG_CD=M, CLS_ID=CL06, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=585, ALLOW_AMT=351, DED_AMT=117, COINS_AMT=58.5, COPAY_AMT=58.5, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8185]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192488723848,01]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{192488723848,01=BORFile     [claimId=R92488723848, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=GPIPDR08, subgroupId=SG08, subscriberId=723436637, personNumber=00, claimNumber=192488723848, claimVersionNumber=01, claimAmount=-50.00, clientPrice=-90.00, bscRevenueAmount=-40.00, checkNumber=2960626, checkDate=17-JUN-19, serviceDate=12-APR-19, payeeId=0107777, payeeName=EXPO PHARMACY, planId=PPOX0001, productId=MRX07098, productCategory=M, classId=CL08, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=-90.00, allowedAmount=-45.00, deductibleAmount=-12.05, coinsuranceAmount=-13.03, copayAmount=-12.21, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=A]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{192488723848,01=DatabaseBOR [FICT_CLM_ID=R92488723848, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=GPIPDR08, SBGRP_ID=SG08, SBSCR_ID=723436637, PERS_NBR=00, CLM_NBR=192488723848, CLM_VER_NBR=01, CLM_AMT=16, CLI_PRC_AMT=-90, BSC_RVNU_AMT=-40, CHK_NBR=2960626, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-04-12 00:00:00.0, PAYE_ID=0107777, PAYE_NM=EXPO PHARMACY, PLN_ID=PPOX0001, PRDCT_ID=MRX07098, PRDCT_CATEG_CD=M, CLS_ID=CL08, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=-90, ALLOW_AMT=-45, DED_AMT=-12.05, COINS_AMT=-13.03, COPAY_AMT=-12.21, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=A, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8186]}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+CLM_AMT mismatch for claimID - 192488723848,01 expected [16.00] but found [-50.00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+CLM_AMT mismatch for claimID - 192488723848,01 expected [16.00] but found [-50.00]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(BorFileValidationTest.java:397)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+at com.bsc.qa.facets.afa.test.BorFileValidationTest.run(BorFileValidationTest.java:462)
+at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:576)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=FAILURE method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="3" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192488723848,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{192488723848,00=BORFile     [claimId=R92488723848, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=GPIPDR08, subgroupId=SG08, subscriberId=723436637, personNumber=00, claimNumber=192488723848, claimVersionNumber=00, claimAmount=16.00, clientPrice=80.00, bscRevenueAmount=64.00, checkNumber=3030818, checkDate=17-JUN-19, serviceDate=12-APR-19, payeeId=0107777, payeeName=EXPO PHARMACY, planId=PPOX0001, productId=MRX07098, productCategory=M, classId=CL08, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=80.00, allowedAmount=48.00, deductibleAmount=16.00, coinsuranceAmount=8.00, copayAmount=8.00, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{192488723848,00=DatabaseBOR [FICT_CLM_ID=R92488723848, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=GPIPDR08, SBGRP_ID=SG08, SBSCR_ID=723436637, PERS_NBR=00, CLM_NBR=192488723848, CLM_VER_NBR=00, CLM_AMT=16, CLI_PRC_AMT=80, BSC_RVNU_AMT=64, CHK_NBR=3030818, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-04-12 00:00:00.0, PAYE_ID=0107777, PAYE_NM=EXPO PHARMACY, PLN_ID=PPOX0001, PRDCT_ID=MRX07098, PRDCT_CATEG_CD=M, CLS_ID=CL08, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=80, ALLOW_AMT=48, DED_AMT=16, COINS_AMT=8, COPAY_AMT=8, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8187]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R59173515955,01]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R59173515955,01=BORFile     [claimId=R59173515955, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=GRPMED05, subgroupId=SG05, subscriberId=909816351, personNumber=00, claimNumber=R59173515955, claimVersionNumber=01, claimAmount=-7.5, clientPrice=-15, bscRevenueAmount=-7.5, checkNumber=8798378, checkDate=17-JUN-19, serviceDate=21-MAY-19, payeeId=0107777, payeeName=EXPO PHARMACY, planId=PPOX0002, productId=M0006025, productCategory=M, classId=CL05, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=-15, allowedAmount=-9, deductibleAmount=-3, coinsuranceAmount=-1.5, copayAmount=-1.5, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=A]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R59173515955,01=DatabaseBOR [FICT_CLM_ID=R59173515955, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=GRPMED05, SBGRP_ID=SG05, SBSCR_ID=909816351, PERS_NBR=00, CLM_NBR=R59173515955, CLM_VER_NBR=01, CLM_AMT=-7.5, CLI_PRC_AMT=-15, BSC_RVNU_AMT=-7.5, CHK_NBR=8798378, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-05-21 00:00:00.0, PAYE_ID=0107777, PAYE_NM=EXPO PHARMACY, PLN_ID=PPOX0002, PRDCT_ID=M0006025, PRDCT_CATEG_CD=M, CLS_ID=CL05, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=-15, ALLOW_AMT=-9, DED_AMT=-3, COINS_AMT=-1.5, COPAY_AMT=-1.5, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=A, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8194]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="0" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R80075499989,00]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{R80075499989,00=BORFile     [claimId=R80075499989, fileName=FACETS_PCT_AFAGL.#061719.011908.txt, vendorName=ARGS, groupNumber=GRPMED11, subgroupId=SG11, subscriberId=909816361, personNumber=00, claimNumber=R80075499989, claimVersionNumber=00, claimAmount=5.50, clientPrice=11.00, bscRevenueAmount=5.50, checkNumber=3045748, checkDate=17-JUN-19, serviceDate=21-MAY-19, payeeId=0107777, payeeName=EXPO PHARMACY, planId=PPOX0001, productId=MRX07098, productCategory=M, classId=CL11, productBusinessCategory=0013, productValueCode=0035, lineOfBusinessId=0006, legalEntity=101, billedAmount=11.00, allowedAmount=6.60, deductibleAmount=2.20, coinsuranceAmount=1.10, copayAmount=1.10, diagnosisCode=9999, diagnosisCodeType=, procedureCode=99199, hcpcs_id=, claimTransactionType=P]}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{R80075499989,00=DatabaseBOR [FICT_CLM_ID=R80075499989, FIL_NM=FACETS_PCT_AFAGL.#061719.011908.txt, VEND_NM=ARGS, GRP_NBR=GRPMED11, SBGRP_ID=SG11, SBSCR_ID=909816361, PERS_NBR=00, CLM_NBR=R80075499989, CLM_VER_NBR=00, CLM_AMT=5.5, CLI_PRC_AMT=11, BSC_RVNU_AMT=5.5, CHK_NBR=3045748, CHK_DT=2019-06-17 00:00:00.0, SVC_DT=2019-05-21 00:00:00.0, PAYE_ID=0107777, PAYE_NM=EXPO PHARMACY, PLN_ID=PPOX0001, PRDCT_ID=MRX07098, PRDCT_CATEG_CD=M, CLS_ID=CL11, PRDCT_BUS_CATEG_CD=0013, PRDCT_VAL1_CD=0035, LOB_ID=0006, LGL_ENTY_CD=101, BIL_AMT=11, ALLOW_AMT=6.6, DED_AMT=2.2, COINS_AMT=1.1, COPAY_AMT=1.1, DIAG_CD=9999, DIAG_TYP_CD=, PROC_CD=99199, HCPCS_ID=, CLM_TRANS_TYP_CD=P, ERR_CD=G, ERR_DESC=GL - Processed, SEQ_KEY=8195]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorToDBData -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="closeConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="closeConnection" is-config="true" duration-ms="5" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeConnection -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterSuite" is-config="true" duration-ms="553" started-at="2019-06-17T12:03:19Z" depends-on-methods="com.bsc.qa.facets.afa.test.BorFileValidationTest.closeConnection" finished-at="2019-06-17T12:03:19Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterSuite" is-config="true" duration-ms="463" started-at="2019-06-18T12:36:52Z" depends-on-methods="com.bsc.qa.facets.afa.test.BorFileValidationTest.closeConnection" finished-at="2019-06-18T12:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
