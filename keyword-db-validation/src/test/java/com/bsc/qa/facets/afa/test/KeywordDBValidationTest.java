@@ -46,8 +46,7 @@ public class KeywordDBValidationTest {
 	public void getConnection() {
 		AutomationStringUtilities decoder = new AutomationStringUtilities();
 		String oracleUser = decoder.decryptValue(System.getenv("ORACLE_USER"));
-		String oraclePassword = decoder.decryptValue(System
-				.getenv("ORACLE_PASSWORD"));
+		String oraclePassword = decoder.decryptValue(System.getenv("ORACLE_PASSWORD")); 
 		String oracleServer = System.getenv("ORACLE_SERVER");
 		String oraclePort = System.getenv("ORACLE_PORT");
 		String oracleDB = System.getenv("ORACLE_DB");

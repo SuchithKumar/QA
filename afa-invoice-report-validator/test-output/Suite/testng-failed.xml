@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="db_user" value="MzE1Ml81MDMyOTEwMjEwZXJpaGFteXNjcnVjaWFsMDEyMzI1MjA="/>
+  <parameter name="jdbc_url" value="jdbc:oracle:thin:@UORC398N.DEV.BSCAL.LOCAL:12521:FACN51A"/>
+  <parameter name="db_password" value="MzE2Ml81MDMyOTEwMjgxMDJAcmVwb2xldmVEdHJhZmZpYzAxMjMyNjQ4"/>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.bsc.qa.facets.afa.test.AfaInvoiceReportValidationTest">
+        <methods>
+          <include name="getConnection"/>
+          <include name="testClaimsActivitySummaryData" invocation-numbers="0"/>
+          <include name="closeConnection"/>
+          <include name="beforeTest"/>
+          <include name="testShieldSavingData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.bsc.qa.facets.afa.test.AfaInvoiceReportValidationTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
