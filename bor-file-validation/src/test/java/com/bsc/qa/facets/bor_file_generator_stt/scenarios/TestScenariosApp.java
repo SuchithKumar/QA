@@ -9,6 +9,8 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.hibernate.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.bsc.qa.facets.afa.pojo.AmountFieldsApp;
 import com.bsc.qa.facets.afa.pojo.BORDatabaseApp;
@@ -36,7 +38,7 @@ public class TestScenariosApp {
 			"5916258,MANOR PHARMACY 1",                         
 			"2803509,WANEK PHARMACY"  };
 	String todayDate = HelperClassApp.getTodaysDate();
-
+	Logger logger = LoggerFactory.getLogger(TestScenariosApp.class);
 	public BORFileApp getPaidScenario1(Session session,
 			List<BORDatabaseApp> borDatabaseList, String borFileName) {
 		// Paid Scenario 1
@@ -90,7 +92,7 @@ public class TestScenariosApp {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println("Scenario 1 written in BOR File");
+		logger.info("Scenario 1 written in BOR File");
 		return borfile;
 	}
 
@@ -148,7 +150,7 @@ public class TestScenariosApp {
 		borfile1.setProcedureCode("99199");
 		borfile1.setHcpcs_id(" ");
 		borfile1.setClaimTransactionType("P");
-		System.out.println("Scenario 2 written in BOR File");
+		logger.info("Scenario 2 written in BOR File");
 		return borfile1;
 	}
 	
@@ -205,7 +207,7 @@ public class TestScenariosApp {
 		borfile1.setProcedureCode("99199");
 		borfile1.setHcpcs_id(" ");
 		borfile1.setClaimTransactionType("P");
-		System.out.println("Scenario 3 written in BOR File");
+		logger.info("Scenario 3 written in BOR File");
 		return borfile1;
 	}
 	
@@ -261,7 +263,7 @@ public class TestScenariosApp {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println("Scenario 4 written in BOR File");
+		logger.info("Scenario 4 written in BOR File");
 		return borfile;
 	}
 
@@ -318,7 +320,7 @@ public class TestScenariosApp {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-		System.out.println("Scenario 5 written in BOR File");
+		logger.info("Scenario 5 written in BOR File");
 		return borfile;
 	}
 
@@ -365,7 +367,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
 		borFileList.add(borAdjustmentFile);
-//		System.out.println(borAdjustmentFile);
+//		logger.info(borAdjustmentFile);
 		BORFileApp borfile = new BORFileApp();
 		BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(10, 29 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		AmountFieldsApp amountFields = HelperClassApp.getAmountFields(billedAmount.add(adjustmentRecord.getBIL_AMT()));
@@ -405,8 +407,8 @@ public class TestScenariosApp {
 		borfile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-//		System.out.println(borfile);
-		System.out.println("Adj Scenario 1 written in BOR File");
+//		logger.info(borfile);
+		logger.info("Adj Scenario 1 written in BOR File");
 		borFileList.add(borfile);
 		
 		return borFileList;
@@ -455,7 +457,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
 //		borFileList.add(borAdjustmentFile);
-		System.out.println(borAdjustmentFile);
+//		logger.info(borAdjustmentFile);
 		BORFileApp borfile = new BORFileApp();
 		BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(10, 29 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal amountPassed;
@@ -501,8 +503,8 @@ public class TestScenariosApp {
 		borfile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-//		System.out.println(borfile);
-		System.out.println("Adj Scenario 2 written in BOR File");
+//		logger.info(borfile);
+		logger.info("Adj Scenario 2 written in BOR File");
 		borFileList.add(borfile);
 		
 		
@@ -555,8 +557,8 @@ public class TestScenariosApp {
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
 		borFileList.add(borAdjustmentFile);
-//		System.out.println(borAdjustmentFile);
-		System.out.println("Adj Scenario 3 written in BOR File");
+//		logger.info(borAdjustmentFile);
+		logger.info("Adj Scenario 3 written in BOR File");
 		return borFileList;
 	}
 	
@@ -606,8 +608,8 @@ public class TestScenariosApp {
 		borfile.setProcedureCode("99199");
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
-//		System.out.println(borfile);
-		System.out.println("Scenario 8 written in BOR File");
+//		logger.info(borfile);
+		logger.info("Scenario 8 written in BOR File");
 		borFileList.add(borfile);
 		
 		return borFileList;
@@ -656,8 +658,8 @@ public class TestScenariosApp {
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
 		borFileList.add(borAdjustmentFile);
-//		System.out.println(borAdjustmentFile);
-		System.out.println("Adj Scenario 5 written in BOR File");
+//		logger.info(borAdjustmentFile);
+		logger.info("Adj Scenario 5 written in BOR File");
 		return borFileList;
 	}
 	
@@ -708,8 +710,8 @@ public class TestScenariosApp {
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("P");
 		borFileList.add(borAdjustmentFile);
-//		System.out.println(borAdjustmentFile);
-		System.out.println("Adj Scenario 6 written in BOR File");
+//		logger.info(borAdjustmentFile);
+		logger.info("Adj Scenario 6 written in BOR File");
 		return borFileList;
 	}
 }
