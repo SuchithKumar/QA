@@ -78,7 +78,7 @@ public class BorGeneratorTest {
 		String filename = list.get(0).getFileName();
 		
 		File file = new File(destFolder+filename);
-		System.out.println(file.getAbsolutePath());
+		logger1.info("BOR File Generated here --> "+file.getAbsolutePath());
 		FlatFileWriter ffWriter = new FileSystemFlatFileWriter(file, true);
 		
 		ffWriter.writeRecordList(list);
