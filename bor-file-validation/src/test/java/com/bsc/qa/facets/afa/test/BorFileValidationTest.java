@@ -68,8 +68,8 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 	List<KeywordDB> keywordDBList;
 	List<KeywordFile> keywordFileList, sortedKeywordClaimIdList;
 	public static Map<String, ErrorStatus> testResults = new HashMap<String, ErrorStatus>();
-	public static String keywordFilePath = System.getenv("keywordFilePath");
-	public static String borFilePath = System.getenv("borFilepath");
+	public static String keywordFilePath = System.getenv("INPUT_KWD_PATH");
+	public static String borFilePath = System.getenv("INPUT_BOR_PATH");
 	private String bor_filename;
 	private String keyword_filename;
 	Logger logger1 = LoggerFactory.getLogger(BorFileValidationTest.class);
