@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class QueriesUtilApp {
 	
 	public Map<String, String> queriesMap(){
-		File file = new File(new File("").getAbsolutePath()+"\\src\\main\\resources\\bor-queries.csv");
+		File file = new File(new File("").getAbsolutePath()+"\\src\\test\\resources\\bor-queries-app.csv");
 		Map<String, String> map=new HashMap<String, String>();
 		List<List<String>> records = new ArrayList<>();
 		try (Scanner scanner = new Scanner(file);) {

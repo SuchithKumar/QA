@@ -3,17 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.bsc.qa.facets.afa.test.BorFileValidationTest">
+      <class name="com.bsc.qa.facets.afa.test.BorGeneratorTest">
         <methods>
-          <include name="afterMethod"/>
-          <include name="getData"/>
+          <include name="changeFileFormatToUnix"/>
           <include name="getConnection"/>
-          <include name="testBorToDBData" invocation-numbers="4 6 8"/>
-          <include name="afterSuite"/>
-          <include name="logResult"/>
+          <include name="getData"/>
+          <include name="testAll"/>
           <include name="closeConnection"/>
         </methods>
-      </class> <!-- com.bsc.qa.facets.afa.test.BorFileValidationTest -->
+      </class> <!-- com.bsc.qa.facets.afa.test.BorGeneratorTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

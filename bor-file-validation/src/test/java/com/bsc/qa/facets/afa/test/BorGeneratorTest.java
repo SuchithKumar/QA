@@ -100,9 +100,6 @@ public class BorGeneratorTest {
 			logger1.info("Modifying EOL characters from Windows to UNIX format!");
 		}
 		
-		if(session.isConnected()){
-			session.close();
-		}
 	}
 	
 	
