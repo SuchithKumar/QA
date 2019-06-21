@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="3" ignored="0" total="19" passed="16">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1102" started-at="2019-06-18T12:36:51Z" finished-at="2019-06-18T12:36:52Z">
+  <suite name="Suite" duration-ms="14339" started-at="2019-06-19T05:23:49Z" finished-at="2019-06-19T05:24:03Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1102" started-at="2019-06-18T12:36:51Z" finished-at="2019-06-18T12:36:52Z">
+    <test name="Test" duration-ms="14339" started-at="2019-06-19T05:23:49Z" finished-at="2019-06-19T05:24:03Z">
       <class name="com.bsc.qa.facets.afa.test.BorFileValidationTest">
-        <test-method status="PASS" signature="getConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getConnection" is-config="true" duration-ms="3178" started-at="2019-06-18T12:36:48Z" finished-at="2019-06-18T12:36:51Z">
+        <test-method status="PASS" signature="getConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getConnection" is-config="true" duration-ms="4571" started-at="2019-06-19T05:23:44Z" finished-at="2019-06-19T05:23:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConnection -->
-        <test-method status="PASS" signature="getData()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getData" is-config="true" duration-ms="689" started-at="2019-06-18T12:36:51Z" finished-at="2019-06-18T12:36:51Z">
+        <test-method status="PASS" signature="getData()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="getData" is-config="true" duration-ms="13812" started-at="2019-06-19T05:23:49Z" finished-at="2019-06-19T05:24:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="265" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="379" started-at="2019-06-19T05:24:03Z" data-provider="allData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -41,7 +41,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="2" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="3" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -52,7 +52,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="allData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -89,7 +89,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -100,7 +100,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -111,7 +111,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="allData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -137,7 +137,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="allData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -163,7 +163,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -174,7 +174,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -185,7 +185,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="3" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="0" started-at="2019-06-19T05:24:03Z" data-provider="allData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -211,7 +211,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -222,7 +222,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -233,7 +233,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -244,7 +244,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="allData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -270,7 +270,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -281,7 +281,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="allData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testAllData(java.lang.String, java.util.Hashtable, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testAllData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="allData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -307,7 +307,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -318,7 +318,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -329,7 +329,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -340,7 +340,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -351,7 +351,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="3" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -372,7 +372,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -383,7 +383,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -394,7 +394,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="0" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -415,7 +415,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -426,7 +426,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -447,7 +447,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -458,7 +458,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -469,7 +469,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="2" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -490,7 +490,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -501,7 +501,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -512,7 +512,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -533,7 +533,7 @@
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(BorFileValidationTest.java:345)
+at com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(BorFileValidationTest.java:344)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -568,7 +568,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -579,7 +579,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="4" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="4" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -590,7 +590,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -601,7 +601,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="0" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -622,7 +622,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -633,7 +633,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -644,7 +644,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="4" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="8" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -706,7 +706,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -717,7 +717,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -728,7 +728,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="6" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="7" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -749,7 +749,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -760,18 +760,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="FAIL" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -833,7 +822,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -844,7 +833,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="4" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -855,7 +855,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="3" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -876,7 +876,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -887,7 +887,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -898,7 +898,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="0" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -919,29 +919,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="0" started-at="2019-06-18T12:36:52Z" data-provider="borToDBData" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="testBorToDBData" duration-ms="1" started-at="2019-06-19T05:24:03Z" data-provider="borToDBData" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -962,7 +940,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBorToDBData -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -973,7 +951,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <params>
             <param index="0">
               <value>
@@ -984,11 +962,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logResult -->
-        <test-method status="PASS" signature="closeConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="closeConnection" is-config="true" duration-ms="5" started-at="2019-06-18T12:36:52Z" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.bsc.qa.facets.afa.test.BorFileValidationTest.testBorToDBData(java.lang.String,java.util.Hashtable,java.util.Hashtable)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="logResult(org.testng.ITestResult)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="logResult" is-config="true" duration-ms="1" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBorToDBData status=SUCCESS method=BorFileValidationTest.testBorToDBData(java.lang.String, java.util.Hashtable, java.util.Hashtable)[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logResult -->
+        <test-method status="PASS" signature="closeConnection()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="closeConnection" is-config="true" duration-ms="12" started-at="2019-06-19T05:24:03Z" finished-at="2019-06-19T05:24:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeConnection -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterSuite" is-config="true" duration-ms="463" started-at="2019-06-18T12:36:52Z" depends-on-methods="com.bsc.qa.facets.afa.test.BorFileValidationTest.closeConnection" finished-at="2019-06-18T12:36:52Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bsc.qa.facets.afa.test.BorFileValidationTest@16b4233]" name="afterSuite" is-config="true" duration-ms="701" started-at="2019-06-19T05:24:03Z" depends-on-methods="com.bsc.qa.facets.afa.test.BorFileValidationTest.closeConnection" finished-at="2019-06-19T05:24:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

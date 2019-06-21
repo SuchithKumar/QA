@@ -1,6 +1,6 @@
-package com.bsc.qa.facets.bor_file_generator_stt.pojo;
+package com.bsc.qa.facets.afa.pojo;
 
-public class Connection {
+public class ConnectionApp {
 
 	String username;
 	String password;

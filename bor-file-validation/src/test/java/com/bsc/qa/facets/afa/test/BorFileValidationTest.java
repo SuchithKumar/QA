@@ -143,6 +143,7 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 	
 	@BeforeTest
 	public void getData() throws Exception {
+		
 		borFilePath= bor_filename;
 		keywordFilePath= keyword_filename;
 		FileReader fileReader = new FileReader();
@@ -339,8 +340,7 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 	@Test(dataProvider="borToDBData")
 	public void testBorToDBData(String claimId,Hashtable<String,BORFile> borTable,Hashtable<String,DatabaseBOR> databaseBorTable){
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yy");
-//		System.out.println(borTable.get(claimId));
-//		System.out.println(databaseBorTable.get(claimId));
+
 		SoftAssert softassert = new SoftAssert();
 		BigDecimal claimAmount = databaseBorTable.get(claimId).getCLM_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal clientPrice = databaseBorTable.get(claimId).getCLI_PRC_AMT().setScale(2, BigDecimal.ROUND_HALF_UP);
@@ -358,6 +358,7 @@ public class BorFileValidationTest extends BaseTest implements IHookable {
 		BigDecimal bordeductibleAmount = new BigDecimal(borTable.get(claimId).getDeductibleAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal borcopayAmount 		=new BigDecimal(borTable.get(claimId).getCopayAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal borcoinsAmount 	=    new BigDecimal(borTable.get(claimId).getCoinsuranceAmount()).setScale(2, BigDecimal.ROUND_HALF_UP);	
+		
 		softassert.assertEquals(borTable.get(claimId).getClaimId(),databaseBorTable.get(claimId).getFICT_CLM_ID(),"FICT_CLM_ID mismatch for claimID - "+claimId );
 		softassert.assertEquals(borTable.get(claimId).getFileName(),databaseBorTable.get(claimId).getFIL_NM(),"FIL_NM mismatch for claimID - "+claimId );
 		softassert.assertEquals(borTable.get(claimId).getVendorName(),databaseBorTable.get(claimId).getVEND_NM(),"VEND_NM mismatch for claimID - "+claimId );

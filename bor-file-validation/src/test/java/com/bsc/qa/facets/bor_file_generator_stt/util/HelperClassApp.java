@@ -2,7 +2,6 @@ package com.bsc.qa.facets.bor_file_generator_stt.util;
 
 import java.io.File;
 import java.math.BigDecimal;
-import java.math.MathContext;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -11,10 +10,12 @@ import java.util.Random;
 import java.util.TimeZone;
 import java.util.concurrent.ThreadLocalRandom;
 
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.AmountFields;
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.BorAdjustmentDB;
+import com.bsc.qa.facets.afa.pojo.AmountFieldsApp;
+import com.bsc.qa.facets.afa.pojo.BorAdjustmentDBApp;
 
-public class HelperClass {
+
+
+public class HelperClassApp {
 
 	private static String dd;
 	private static String mm;
@@ -108,11 +109,11 @@ public class HelperClass {
 		return dateFormat.format(d).toUpperCase().concat(yearString);
 	}
 	
-	public static AmountFields getAmountFields(BigDecimal billedAmount){
-		AmountFields amountFields = new AmountFields();
-		
+	public static AmountFieldsApp getAmountFields(BigDecimal billedAmount){
+		AmountFieldsApp amountFields = new AmountFieldsApp();
+		//ingredientCost
 		//BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(400, 999 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal ingredientCost = billedAmount.divide(new BigDecimal(2)).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal ingredientCost = billedAmount;//.divide(new BigDecimal(2)).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal allowedAmount = billedAmount.multiply((new BigDecimal(0.6))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal deductible = billedAmount.multiply((new BigDecimal(0.2))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal copay = billedAmount.multiply((new BigDecimal(0.1))).setScale(2, BigDecimal.ROUND_HALF_UP);
@@ -134,8 +135,8 @@ public class HelperClass {
 		return amountFields;
 	}
 
-	public static AmountFields getAdjustmentAmountFields(BigDecimal billedAmount){
-		AmountFields amountFields = new AmountFields();
+	public static AmountFieldsApp getAdjustmentAmountFields(BigDecimal billedAmount){
+		AmountFieldsApp amountFields = new AmountFieldsApp();
 		
 		//BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(400, 999 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		//BigDecimal ingredientCost = billedAmount.divide(new BigDecimal(2)).setScale(2, BigDecimal.ROUND_HALF_UP);
@@ -160,8 +161,8 @@ public class HelperClass {
 		return amountFields;
 	}
 	
-	public static AmountFields getAdjustmentAmountFieldsScenario3(BigDecimal billedAmount,BorAdjustmentDB adjustmentRecord){
-		AmountFields amountFields = new AmountFields();
+	public static AmountFieldsApp getAdjustmentAmountFieldsScenario3(BigDecimal billedAmount,BorAdjustmentDBApp adjustmentRecord){
+		AmountFieldsApp amountFields = new AmountFieldsApp();
 		
 		//BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(400, 999 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
 		//BigDecimal ingredientCost = billedAmount.divide(new BigDecimal(2)).setScale(2, BigDecimal.ROUND_HALF_UP);

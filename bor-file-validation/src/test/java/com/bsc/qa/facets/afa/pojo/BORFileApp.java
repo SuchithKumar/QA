@@ -1,10 +1,10 @@
-package com.bsc.qa.facets.bor_file_generator_stt.pojo;
+package com.bsc.qa.facets.afa.pojo;
 
 import com.github.ffpojo.metadata.positional.annotation.PositionalField;
 import com.github.ffpojo.metadata.positional.annotation.PositionalRecord;
 
 @PositionalRecord
-public class BORFile {
+public class BORFileApp {
 	
 	private String claimId;
 	private String fileName;

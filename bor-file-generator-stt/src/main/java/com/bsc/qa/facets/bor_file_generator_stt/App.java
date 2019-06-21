@@ -16,10 +16,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.bsc.bqsa.AutomationStringUtilities;
-import com.bsc.qa.facets.bor_file_generator_stt.dao.DatabaseUtil;
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.BORFile;
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.Connection;
-import com.bsc.qa.facets.bor_file_generator_stt.util.HibernateUtil;
+import com.bsc.qa.facets.bor_file_generator_stt.dao.DatabaseUtilApp;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.BORFileApp;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.ConnectionApp;
+import com.bsc.qa.facets.bor_file_generator_stt.util.HibernateUtilApp;
 import com.github.ffpojo.exception.FFPojoException;
 import com.github.ffpojo.file.writer.FileSystemFlatFileWriter;
 import com.github.ffpojo.file.writer.FlatFileWriter;
@@ -30,7 +30,7 @@ import com.github.ffpojo.file.writer.FlatFileWriter;
  */
 public class App {
 	public static void main(String[] args) throws FFPojoException, IOException {
-		DatabaseUtil util = new DatabaseUtil();
+		DatabaseUtilApp util = new DatabaseUtilApp();
 		AutomationStringUtilities decoder = new AutomationStringUtilities();
 		SessionFactory sessionFactory = null;
 		Session session;
@@ -43,7 +43,7 @@ public class App {
 		String oracleDB = System.getenv("ORACLE_DB");
 		String oracleUrl = "jdbc:oracle:thin:@" + oracleServer + ":" + oraclePort + ":" + oracleDB ;
 		String destFolder = System.getenv("BOR_DEST_PATH");
-		Connection conn = new Connection();
+		ConnectionApp conn = new ConnectionApp();
 		conn.setUsername(oracleUser);
 		conn.setPassword(oraclePassword);
 		conn.setUrl(oracleUrl);
@@ -52,7 +52,7 @@ public class App {
 		try {
 			logger1.info("Connecting to Database...");
 			logger1.info("Establishing DB connection with the URL - "+conn.getUrl());
-			sessionFactory = HibernateUtil.createSessionFactory(conn);
+			sessionFactory = HibernateUtilApp.createSessionFactory(conn);
 		} catch (Exception e) {
 			logger1.error( "Provided invalid database environment variables, Unable to Connect to DB");
 			logger1.info( "Ending test execution...");
@@ -66,7 +66,7 @@ public class App {
 			logger1.info("Succesfully connected to DB!");
 		}
 		
-		List<BORFile> list = util.getBorFileList(session,util.getBorFileListFromDB(session),util.getBorAdjustmentRecords(session));
+		List<BORFileApp> list = util.getBorFileList(session,util.getBorFileListFromDB(session),util.getBorAdjustmentRecords(session));
 		String filename = list.get(0).getFileName();
 		
 		File file = new File(destFolder+filename);

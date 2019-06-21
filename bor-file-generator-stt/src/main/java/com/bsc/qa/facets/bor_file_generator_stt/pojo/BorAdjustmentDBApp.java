@@ -3,7 +3,7 @@ package com.bsc.qa.facets.bor_file_generator_stt.pojo;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class BorAdjustmentDB {
+public class BorAdjustmentDBApp {
 
 	/*
 	 * FICT_CLM_ID FIL_NM VEND_NM GRP_NBR SBGRP_ID SBSCR_ID PERS_NBR CLM_NBR

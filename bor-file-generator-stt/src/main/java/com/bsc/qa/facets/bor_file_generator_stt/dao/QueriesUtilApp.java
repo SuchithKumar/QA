@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class QueriesUtil {
+public class QueriesUtilApp {
 	
 	public Map<String, String> queriesMap(){
 		File file = new File(new File("").getAbsolutePath()+"\\src\\main\\resources\\bor-queries.csv");

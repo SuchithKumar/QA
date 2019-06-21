@@ -15,25 +15,25 @@ import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.AmountFields;
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.BORDatabase;
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.BORFile;
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.BorAdjustmentDB;
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.Connection;
-import com.bsc.qa.facets.bor_file_generator_stt.scenarios.TestScenarios;
-import com.bsc.qa.facets.bor_file_generator_stt.util.DatabaseValidation;
-import com.bsc.qa.facets.bor_file_generator_stt.util.HelperClass;
-import com.bsc.qa.facets.bor_file_generator_stt.util.HibernateUtil;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.AmountFieldsApp;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.BORDatabaseApp;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.BORFileApp;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.BorAdjustmentDBApp;
+import com.bsc.qa.facets.bor_file_generator_stt.pojo.ConnectionApp;
+import com.bsc.qa.facets.bor_file_generator_stt.scenarios.TestScenariosApp;
+import com.bsc.qa.facets.bor_file_generator_stt.util.DatabaseValidationApp;
+import com.bsc.qa.facets.bor_file_generator_stt.util.HelperClassApp;
+import com.bsc.qa.facets.bor_file_generator_stt.util.HibernateUtilApp;
 
-public class DatabaseUtil {
+public class DatabaseUtilApp {
 
-	List<BORFile>  borFileList ;
-	List<BORDatabase> borDatabaseList;
-	List<BorAdjustmentDB> borAdjustmentDbList;
+	List<BORFileApp>  borFileList ;
+	List<BORDatabaseApp> borDatabaseList;
+	List<BorAdjustmentDBApp> borAdjustmentDbList;
 	Map<String, String> queriesMap;
-	QueriesUtil queryUtil = new QueriesUtil();
-	public List<BORDatabase> getBorFileListFromDB(Session session){
-		borDatabaseList = new ArrayList<BORDatabase>();
+	QueriesUtilApp queryUtil = new QueriesUtilApp();
+	public List<BORDatabaseApp> getBorFileListFromDB(Session session){
+		borDatabaseList = new ArrayList<BORDatabaseApp>();
 		queriesMap =  queryUtil.queriesMap();
 		SQLQuery query = session.createSQLQuery(queriesMap.get("BorFileListFromDB"));
 		/*
@@ -42,7 +42,7 @@ public class DatabaseUtil {
 		 */
 		List<Object[]> list = (List<Object[]>) query.list();
 		for (Object[] objects : list) {
-			BORDatabase borDB = new BORDatabase();
+			BORDatabaseApp borDB = new BORDatabaseApp();
 			borDB.setGrpId((String) objects[0]);
 			borDB.setSubgrpId((String) objects[1]);
 			borDB.setSubId((String) objects[2]);
@@ -62,13 +62,13 @@ public class DatabaseUtil {
 		return borDatabaseList;
 	}
 	
-	public List<BorAdjustmentDB> getBorAdjustmentRecords(Session session){
-		borAdjustmentDbList = new ArrayList<BorAdjustmentDB>();
+	public List<BorAdjustmentDBApp> getBorAdjustmentRecords(Session session){
+		borAdjustmentDbList = new ArrayList<BorAdjustmentDBApp>();
 		queriesMap =  queryUtil.queriesMap();
 		SQLQuery query = session.createSQLQuery(queriesMap.get("BorAdjustmentRecords"));
 		List<Object[]> list = (List<Object[]>) query.list();
 		for (Object[] objects : list) {
-			BorAdjustmentDB borAdjustmentDB = new BorAdjustmentDB();
+			BorAdjustmentDBApp borAdjustmentDB = new BorAdjustmentDBApp();
 		
 			borAdjustmentDB.setFICT_CLM_ID((String)objects[0]);
 			borAdjustmentDB.setFIL_NM((String)objects[1]);
@@ -112,14 +112,14 @@ public class DatabaseUtil {
 		return borAdjustmentDbList;
 	}
 	
-	public List<BORFile> getBorFileList(Session session,List<BORDatabase> borDatabaseList,List<BorAdjustmentDB> borAdjustmentDbList){
-		borFileList = new ArrayList<BORFile>();
-		String borFileName = HelperClass.getBorFileName();
+	public List<BORFileApp> getBorFileList(Session session,List<BORDatabaseApp> borDatabaseList,List<BorAdjustmentDBApp> borAdjustmentDbList){
+		borFileList = new ArrayList<BORFileApp>();
+		String borFileName = HelperClassApp.getBorFileName();
 		
 		
-		TestScenarios getBorRecords = new TestScenarios();
+		TestScenariosApp getBorRecords = new TestScenariosApp();
 		//Paid Scenario 1
-		BORFile borfilePaidScenario1 = getBorRecords.getPaidScenario1(session, borDatabaseList,borFileName);
+		BORFileApp borfilePaidScenario1 = getBorRecords.getPaidScenario1(session, borDatabaseList,borFileName);
 		borFileList.add(borfilePaidScenario1);
 		borFileList.add(borfilePaidScenario1);
 		//Paid Scenario 2

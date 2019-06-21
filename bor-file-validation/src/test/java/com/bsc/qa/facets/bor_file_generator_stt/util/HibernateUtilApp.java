@@ -5,13 +5,13 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import com.bsc.qa.facets.bor_file_generator_stt.pojo.Connection;
+import com.bsc.qa.facets.afa.pojo.ConnectionApp;
 
 
-public class HibernateUtil {
+public class HibernateUtilApp {
 	
 	
-	public static SessionFactory createSessionFactory(Connection conn){
+	public static SessionFactory createSessionFactory(ConnectionApp conn){
 		Configuration configuration = new Configuration().configure();
 		configuration.getProperties().setProperty("hibernate.connection.username", conn.getUsername());
 		configuration.getProperties().setProperty("hibernate.connection.password", conn.getPassword());
