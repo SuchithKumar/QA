@@ -37,7 +37,7 @@ public class KeywordDBValidationTest {
 	List<DatabaseKeyword> databaselist;
 	List<Demographic> demographiclist;
 	public static String keyword_filename;
-	String keywordFilePath = System.getenv("keywordFilePath");
+	String keywordFilePath = System.getenv("INPUT_KWD_PATH");
 	public static Map<String, String> testResults = new HashMap<String, String>();
 	Set<Boolean> resultSet = new HashSet<Boolean>();
 	Logger logger1 = LoggerFactory.getLogger(KeywordDBValidationTest.class);
