@@ -6,7 +6,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -28,6 +32,7 @@ import org.hibernate.Session;
 
 import com.bsc.qa.facets.afa.pojo.ClaimsActivitySummary;
 import com.bsc.qa.facets.afa.pojo.FrontPage;
+import com.bsc.qa.facets.afa.pojo.MemberDetails;
 import com.bsc.qa.facets.afa.pojo.ShieldSaving;
 import com.bsc.qa.facets.afa.test.AfaInvoiceReportValidationTest;
 import com.monitorjbl.xlsx.StreamingReader;
@@ -37,7 +42,7 @@ public class AfaInvoiceReportReader {
 			+ "\\src\\test\\resources\\input\\input.xlsx");
 	static File afaInvoiceReport = new File(
 			new File("").getAbsoluteFile()
-					+ "\\src\\test\\resources\\input\\BRD543709-AFA Claims Billing Invoice report_01.xlsx");
+					+ "\\src\\test\\resources\\input\\BRD543709-AFA Claims Billing Invoice report.xlsx");
 	private static Set<String> inputInvoiceNoSet = new HashSet<String>();
 	private Map<String,FrontPage> frontPageExcelMap ;
 	private Map<String,List<ShieldSaving>> shieldSavingExcelMap;
@@ -350,4 +355,236 @@ public class AfaInvoiceReportReader {
 		}
 		return claimsActivitySummaryExcelMap;
 	}
+	
+	public  Map<String,List<MemberDetails>> getMemberDetailsData(Map<String,List<MemberDetails>> memberDetailsDBMap) {
+		Map<String,List<MemberDetails>> memberDetailsExcelMap = new HashMap<String, List<MemberDetails>>();
+		inputInvoiceNoSet = getInputSet();
+		Map<String, MemberDetails> resultingMembersMap = new HashMap<String, MemberDetails>();
+		
+		for (String invoiceNO : inputInvoiceNoSet) {
+			List<MemberDetails> memberDetailsDBList = memberDetailsDBMap.get(invoiceNO);
+			List<MemberDetails> memberDetailsExcelList = new ArrayList<MemberDetails>();
+			
+			try {
+				
+				Workbook workbook = WorkbookFactory.create(afaInvoiceReport);
+				Sheet memberDetailsSheet = workbook.getSheet("Member Detail");
+
+				for (int i = 1; i <= memberDetailsSheet.getLastRowNum(); i++) {
+					Row row = memberDetailsSheet.getRow(i);
+					Cell cell = row.getCell(2);
+					String celldata = getCellValue(cell);
+					int nextIndex = 0;
+					if (celldata.contains(invoiceNO)) {
+						int rowno = cell.getRowIndex();
+					for(int j=0;j<memberDetailsDBList.size();j++){
+						MemberDetails dbMember = memberDetailsDBList.get(j);
+						MemberDetails memberDetails = new MemberDetails();
+						
+						String dbMemberGroupIDName = dbMember.getGroupIdName().trim();
+						String dbMemberBC = dbMember.getBillingCategory().trim();
+//						System.out.println(dbMemberBC+" DB");
+						String dbMemberPlan = dbMember.getPlanId().trim();
+						String dbMemberClass = dbMember.getClassId().trim();
+						String dbMemberSSN = dbMember.getSsn().trim();
+						
+						Cell groupName = memberDetailsSheet.getRow(rowno-4).getCell(2);
+						Cell groupBillingId = memberDetailsSheet.getRow(rowno-3).getCell(2);
+						Cell claimsCycle = memberDetailsSheet.getRow(rowno-2).getCell(2);
+						Cell billDueDate = memberDetailsSheet.getRow(rowno-1).getCell(2);
+						Cell invoiceNo = memberDetailsSheet.getRow(rowno).getCell(2);
+						
+						String excelMemberGroupIDName1 = null;
+						String excelMemberBC = null;
+						String excelMemberPlan = null;
+						for(int n=row.getRowNum();n<memberDetailsSheet.getLastRowNum();n++){
+							
+							Cell nextSection = memberDetailsSheet.getRow(n).getCell(0);
+							if(getCellValue(nextSection).contains("GROUP NAME")){
+								nextIndex = n;
+								break;
+							}
+						}
+						int findingRightRowIndex = 0;
+						int bcPlanIndex = 0;
+						for(int m=rowno;m<nextIndex;m++){
+							String excelMemberGroupIDName= getCellValue(memberDetailsSheet.getRow(m).getCell(0)).replace("Group ID/Name:", "").trim();
+							
+							if(excelMemberGroupIDName.equalsIgnoreCase(dbMemberGroupIDName)){
+								excelMemberGroupIDName1 = excelMemberGroupIDName;
+								boolean factor1 = true;
+								bcPlanIndex = m;
+								while(factor1){
+									 excelMemberBC = getCellValue(memberDetailsSheet.getRow(bcPlanIndex+1).getCell(0)).replace("Billing Category:", "").trim();
+									 excelMemberPlan = getCellValue(memberDetailsSheet.getRow(bcPlanIndex+2).getCell(0)).replace("Plan:", "").trim();
+									if(excelMemberBC.equalsIgnoreCase(dbMemberBC)&&excelMemberPlan.equalsIgnoreCase(dbMemberPlan)){
+										factor1 = false;
+										findingRightRowIndex = bcPlanIndex+3;
+									}else{
+										bcPlanIndex+=1;
+									}
+								}
+									
+								boolean factor = true;
+								
+								while(factor){
+								String excelMemberClass = getCellValue(memberDetailsSheet.getRow(findingRightRowIndex).getCell(0)).trim();
+								String excelMemberSSN = getCellValue(memberDetailsSheet.getRow(findingRightRowIndex).getCell(2)).trim();
+								if(excelMemberClass.equalsIgnoreCase(dbMemberClass) && excelMemberSSN.equalsIgnoreCase(dbMemberSSN)){
+									factor = false;
+								}else{
+									findingRightRowIndex+=1;
+								}
+							  }
+							
+					      }
+						}
+						Row requiredRow = memberDetailsSheet.getRow(findingRightRowIndex);
+						String groupIdName	    = excelMemberGroupIDName1.trim();
+						String billingCategory  = excelMemberBC;
+						String planId	  	    = excelMemberPlan;
+						String classId		    = getCellValue(requiredRow.getCell(0));
+						String subscriberId     = getCellValue(requiredRow.getCell(1));
+						String ssn			    = getCellValue(requiredRow.getCell(2));
+						String subscriberName   = getCellValue(requiredRow.getCell(3));
+						String patientName 	    = getCellValue(requiredRow.getCell(4));
+						String relationship     = getCellValue(requiredRow.getCell(5));
+						String dept 		    = getCellValue(requiredRow.getCell(6));
+						String claimId 		    = getCellValue(requiredRow.getCell(7));
+						String checkNumber 	    = getCellValue(requiredRow.getCell(8));
+						DateFormat formatter = new SimpleDateFormat("E MMM dd HH:mm:ss Z yyyy");
+						
+						String stringPaidDate 	= getCellValue(requiredRow.getCell(9));
+						Date paidDate = (Date)formatter.parse(stringPaidDate);
+						Calendar calPaidDate = Calendar.getInstance();
+						calPaidDate.setTime(paidDate);
+						
+						int paidMM = calPaidDate.get(Calendar.MONTH) + 1;
+						String paidMMStr ;
+						if(paidMM<10){
+							paidMMStr = "0"+paidMM;
+						}else{
+							paidMMStr = ""+paidMM;
+						}
+						
+						int paidDD = calPaidDate.get(Calendar.MONTH) + 1;
+						String paidDDStr ;
+						if(paidDD<10){
+							paidDDStr = "0"+paidDD;
+						}else{
+							paidDDStr = ""+paidDD;
+						}
+						String formatedPaidDate = paidMMStr + "/" + paidDDStr + "/" +         calPaidDate.get(Calendar.YEAR);
+						
+						String stringFromDate 	= getCellValue(requiredRow.getCell(10));
+						Date fromDate = (Date)formatter.parse(stringFromDate);
+						Calendar calFromDate = Calendar.getInstance();
+						calPaidDate.setTime(fromDate);
+						int fromMM = calFromDate.get(Calendar.MONTH) + 1;
+						String fromMMStr ;
+						if(fromMM<10){
+							fromMMStr = "0"+fromMM;
+						}else{
+							fromMMStr = ""+fromMM;
+						}
+						
+						int fromDD = calFromDate.get(Calendar.MONTH) + 1;
+						String fromDDStr ;
+						if(fromDD<10){
+							fromDDStr = "0"+fromDD;
+						}else{
+							fromDDStr = ""+fromDD;
+						}
+						String formatedFromDate =  fromMMStr + "/" + fromDDStr + "/" +         calFromDate.get(Calendar.YEAR);
+						
+						String stringToDate 	= getCellValue(requiredRow.getCell(11));
+						Date toDate = (Date)formatter.parse(stringToDate);
+						Calendar calToDate = Calendar.getInstance();
+						calPaidDate.setTime(toDate);
+						
+						int toMM = calToDate.get(Calendar.MONTH) + 1;
+						String toMMStr ;
+						if(toMM<10){
+							toMMStr = "0"+toMM;
+						}else{
+							toMMStr = ""+toMM;
+						}
+						
+						int toDD = calToDate.get(Calendar.MONTH) + 1;
+						String toDDStr ;
+						if(toDD<10){
+							toDDStr = "0"+toDD;
+						}else{
+							toDDStr = ""+toDD;
+						}
+						String formatedToDate =  toMMStr + "/" + toDDStr + "/" +         calToDate.get(Calendar.YEAR);
+						
+						String payeeName 	    = getCellValue(requiredRow.getCell(12));
+						String payeeId 		    = getCellValue(requiredRow.getCell(13));
+						String coverage 	    = getCellValue(requiredRow.getCell(14));
+						String deductible 	    = getCellValue(requiredRow.getCell(15));
+						String coinsurance 	    = getCellValue(requiredRow.getCell(16));
+						String copay 		    = getCellValue(requiredRow.getCell(17));
+						String medical 		    = getCellValue(requiredRow.getCell(18));
+						String costContainment  = getCellValue(requiredRow.getCell(19));
+						String interest 		= getCellValue(requiredRow.getCell(20));	
+						String dental 			= getCellValue(requiredRow.getCell(21));	
+						String pharmacy 		= getCellValue(requiredRow.getCell(22));	
+						String bluecard 		= getCellValue(requiredRow.getCell(23));	
+						String stoploss 		= getCellValue(requiredRow.getCell(24));	
+						String hra 				= getCellValue(requiredRow.getCell(25));	
+						String totalPaid 		= getCellValue(requiredRow.getCell(26));	
+						
+						memberDetails.setGroupName(getCellValue(groupName).trim());
+						memberDetails.setGroupBillingId(getCellValue(groupBillingId).trim());
+						memberDetails.setClaimsCycle(getCellValue(claimsCycle).trim());
+						memberDetails.setBillDueDate(getCellValue(billDueDate).trim());
+						memberDetails.setInvoiceNo(getCellValue(invoiceNo).trim());
+						memberDetails.setGroupIdName(groupIdName);
+						memberDetails.setBillingCategory(billingCategory);
+						memberDetails.setPlanId(planId);
+						memberDetails.setClassId(classId);
+						memberDetails.setSubscriberId(subscriberId);
+						memberDetails.setSsn(ssn);
+						memberDetails.setSubscriberName(subscriberName);
+						memberDetails.setPatientName(patientName);
+						memberDetails.setRelationship(relationship );
+						memberDetails.setDept(dept);
+						memberDetails.setClaimId(claimId);
+						memberDetails.setCheckNumber(new BigDecimal(checkNumber).setScale(0,BigDecimal.ROUND_DOWN));
+						memberDetails.setPaidDate(formatedPaidDate);
+						memberDetails.setFromDate(formatedFromDate);
+						memberDetails.setToDate(formatedToDate);
+						memberDetails.setPayeeName(payeeName);
+						memberDetails.setPayeeId(payeeId);
+						memberDetails.setCoverage(coverage);
+						memberDetails.setDeductible("$"+deductible);
+						memberDetails.setCoinsurance("$"+coinsurance);
+						memberDetails.setCopay("$"+copay);
+						memberDetails.setMedical("$"+medical);
+						memberDetails.setCostContainment("$"+costContainment);
+						memberDetails.setInterest("$"+interest);
+						memberDetails.setDental("$"+dental);
+						memberDetails.setPharmacy("$"+pharmacy);
+						memberDetails.setBluecard("$"+bluecard);
+						memberDetails.setStoploss("$"+stoploss);
+						memberDetails.setHra("$"+hra);
+						memberDetails.setTotalPaid("$"+totalPaid);
+						
+						memberDetailsExcelList.add(memberDetails);	
+						System.out.println(memberDetails);
+						
+						}
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			memberDetailsExcelMap.put(invoiceNO, memberDetailsExcelList);
+		}
+		return memberDetailsExcelMap;
+	}
+	
+	
 }

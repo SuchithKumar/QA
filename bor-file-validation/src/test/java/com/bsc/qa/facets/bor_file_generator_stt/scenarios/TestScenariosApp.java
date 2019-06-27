@@ -37,6 +37,7 @@ public class TestScenariosApp {
 			"5633448,RITE AID PHARMACY 06",                         
 			"5916258,MANOR PHARMACY 1",                         
 			"2803509,WANEK PHARMACY"  };
+	String todayDateFake = HelperClassApp.getTodaysDateFake();
 	String todayDate = HelperClassApp.getTodaysDate();
 	Logger logger = LoggerFactory.getLogger(TestScenariosApp.class);
 	public BORFileApp getPaidScenario1(Session session,
@@ -48,7 +49,7 @@ public class TestScenariosApp {
 		String payeeId = payee[0];
 		String payeeName = payee[1];
 		
-		String todayDate = HelperClassApp.getTodaysDate();
+		String todayDate = HelperClassApp.getTodaysDateFake();
 		BORDatabaseApp borDatabase = borDatabaseList.get(0);
 		BORFileApp borfile = new BORFileApp();
 		String claimID = DatabaseValidationApp.generateUniqueClaimNumber(session);
@@ -104,7 +105,7 @@ public class TestScenariosApp {
 		String[] payee = pharmacies[payeeIndex].split(",");
 		String payeeId = payee[0];
 		String payeeName = payee[1];
-		String todayDate = HelperClassApp.getTodaysDate();
+		String todayDate = HelperClassApp.getTodaysDateFake();
 
 		BORDatabaseApp borDatabase1 = borDatabaseList.get(1);
 		BORFileApp borfile1 = new BORFileApp();
@@ -161,7 +162,7 @@ public class TestScenariosApp {
 		String[] payee = pharmacies[payeeIndex].split(",");
 		String payeeId = payee[0];
 		String payeeName = payee[1];
-		String todayDate = HelperClassApp.getTodaysDate();
+		String todayDate = HelperClassApp.getTodaysDateFake();
 
 		BORDatabaseApp borDatabase1 = borDatabaseList.get(2);
 		BORFileApp borfile1 = new BORFileApp();
@@ -276,7 +277,7 @@ public class TestScenariosApp {
 		String payeeId = payee[0];
 		String payeeName = payee[1];
 		
-		String todayDate = HelperClassApp.getTodaysDate();
+		String todayDate = HelperClassApp.getTodaysDateFake();
 		BORDatabaseApp borDatabase = borDatabaseList.get(4);
 		BORFileApp borfile = new BORFileApp();
 		String claimID = DatabaseValidationApp.generateUniqueClaimNumber(session);
@@ -344,7 +345,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setClientPrice("-"+String.valueOf(adjustmentRecord.getCLI_PRC_AMT().setScale(2, BigDecimal.ROUND_HALF_UP)));
 		borAdjustmentFile.setBscRevenueAmount("-"+String.valueOf(adjustmentRecord.getBSC_RVNU_AMT().setScale(2, BigDecimal.ROUND_HALF_UP)));
 		borAdjustmentFile.setCheckNumber(adjustmentRecord.getCHK_NBR());
-		borAdjustmentFile.setCheckDate(todayDate);
+		borAdjustmentFile.setCheckDate(todayDateFake);
 		borAdjustmentFile.setServiceDate(dateFormat.format(svcDate).toUpperCase().trim());
 		borAdjustmentFile.setPayeeId(adjustmentRecord.getPAYE_ID());
 		borAdjustmentFile.setPayeeName(adjustmentRecord.getPAYE_NM());
@@ -367,6 +368,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
 		borFileList.add(borAdjustmentFile);
+		logger.info("Adj Scenario 1 written in BOR File - A");
 //		logger.info(borAdjustmentFile);
 		BORFileApp borfile = new BORFileApp();
 		BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(10, 29 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
@@ -385,7 +387,7 @@ public class TestScenariosApp {
 		borfile.setClientPrice(amountFields.getClientPrice());
 		borfile.setBscRevenueAmount(amountFields.getBscRevenueAmount());
 		borfile.setCheckNumber(checkNumber11);
-		borfile.setCheckDate(todayDate);
+		borfile.setCheckDate(todayDateFake);
 		borfile.setServiceDate(dateFormat.format(svcDate).toUpperCase().trim());
 		borfile.setPayeeId(adjustmentRecord.getPAYE_ID());
 		borfile.setPayeeName(adjustmentRecord.getPAYE_NM());
@@ -408,7 +410,7 @@ public class TestScenariosApp {
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
 //		logger.info(borfile);
-		logger.info("Adj Scenario 1 written in BOR File");
+		logger.info("Adj Scenario 1 written in BOR File - P");
 		borFileList.add(borfile);
 		
 		return borFileList;
@@ -434,7 +436,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setClientPrice("-"+String.valueOf(adjustmentRecord.getCLI_PRC_AMT().setScale(2, BigDecimal.ROUND_HALF_UP)));
 		borAdjustmentFile.setBscRevenueAmount("-"+String.valueOf(adjustmentRecord.getBSC_RVNU_AMT().setScale(2, BigDecimal.ROUND_HALF_UP)));
 		borAdjustmentFile.setCheckNumber(adjustmentRecord.getCHK_NBR());
-		borAdjustmentFile.setCheckDate(todayDate);
+		borAdjustmentFile.setCheckDate(todayDateFake);
 		borAdjustmentFile.setServiceDate(dateFormat.format(svcDate).toUpperCase().trim());
 		borAdjustmentFile.setPayeeId(adjustmentRecord.getPAYE_ID());
 		borAdjustmentFile.setPayeeName(adjustmentRecord.getPAYE_NM());
@@ -456,7 +458,8 @@ public class TestScenariosApp {
 		borAdjustmentFile.setProcedureCode(adjustmentRecord.getPROC_CD().trim());
 		borAdjustmentFile.setHcpcs_id(" ");
 		borAdjustmentFile.setClaimTransactionType("A");
-//		borFileList.add(borAdjustmentFile);
+		borFileList.add(borAdjustmentFile);
+		logger.info("Adj Scenario 2 written in BOR File - A");
 //		logger.info(borAdjustmentFile);
 		BORFileApp borfile = new BORFileApp();
 		BigDecimal billedAmount =(new BigDecimal(ThreadLocalRandom.current().nextInt(10, 29 + 1))).setScale(2, BigDecimal.ROUND_HALF_UP);
@@ -481,7 +484,7 @@ public class TestScenariosApp {
 		borfile.setClientPrice(amountFields.getClientPrice());
 		borfile.setBscRevenueAmount(amountFields.getBscRevenueAmount());
 		borfile.setCheckNumber(checkNumber11);
-		borfile.setCheckDate(todayDate);
+		borfile.setCheckDate(todayDateFake);
 		borfile.setServiceDate(dateFormat.format(svcDate).toUpperCase().trim());
 		borfile.setPayeeId(adjustmentRecord.getPAYE_ID());
 		borfile.setPayeeName(adjustmentRecord.getPAYE_NM());
@@ -504,7 +507,7 @@ public class TestScenariosApp {
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
 //		logger.info(borfile);
-		logger.info("Adj Scenario 2 written in BOR File");
+		logger.info("Adj Scenario 2 written in BOR File - P");
 		borFileList.add(borfile);
 		
 		
@@ -534,7 +537,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setClientPrice("-"+amountFields.getClientPrice());
 		borAdjustmentFile.setBscRevenueAmount("-"+amountFields.getBscRevenueAmount());
 		borAdjustmentFile.setCheckNumber(adjustmentRecord.getCHK_NBR());
-		borAdjustmentFile.setCheckDate(todayDate);
+		borAdjustmentFile.setCheckDate(todayDateFake);
 		borAdjustmentFile.setServiceDate(dateFormat.format(svcDate).toUpperCase().trim());
 		borAdjustmentFile.setPayeeId(adjustmentRecord.getPAYE_ID());
 		borAdjustmentFile.setPayeeName(adjustmentRecord.getPAYE_NM());
@@ -558,7 +561,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setClaimTransactionType("A");
 		borFileList.add(borAdjustmentFile);
 //		logger.info(borAdjustmentFile);
-		logger.info("Adj Scenario 3 written in BOR File");
+		logger.info("Adj Scenario 3 written in BOR File - A");
 		return borFileList;
 	}
 	
@@ -586,7 +589,7 @@ public class TestScenariosApp {
 		borfile.setClientPrice(amountFields.getClientPrice());
 		borfile.setBscRevenueAmount(amountFields.getBscRevenueAmount());
 		borfile.setCheckNumber(adjustmentRecord.getCHK_NBR());
-		borfile.setCheckDate(todayDate);
+		borfile.setCheckDate(todayDateFake);
 		borfile.setServiceDate(dateFormat.format(svcDate).toUpperCase().trim());
 		borfile.setPayeeId(adjustmentRecord.getPAYE_ID());
 		borfile.setPayeeName(adjustmentRecord.getPAYE_NM());
@@ -609,7 +612,7 @@ public class TestScenariosApp {
 		borfile.setHcpcs_id(" ");
 		borfile.setClaimTransactionType("P");
 //		logger.info(borfile);
-		logger.info("Scenario 8 written in BOR File");
+		logger.info("Adj Scenario 4 written in BOR File - A");
 		borFileList.add(borfile);
 		
 		return borFileList;
@@ -635,7 +638,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setClientPrice("-"+String.valueOf(adjustmentRecord.getCLI_PRC_AMT().setScale(2, BigDecimal.ROUND_HALF_UP)));
 		borAdjustmentFile.setBscRevenueAmount("-"+String.valueOf(adjustmentRecord.getBSC_RVNU_AMT().setScale(2, BigDecimal.ROUND_HALF_UP)));
 		borAdjustmentFile.setCheckNumber(adjustmentRecord.getCHK_NBR());
-		borAdjustmentFile.setCheckDate(todayDate);
+		borAdjustmentFile.setCheckDate(todayDateFake);
 		borAdjustmentFile.setServiceDate(dateFormat.format(adjustmentRecord.getSVC_DT()).toUpperCase().trim());
 		borAdjustmentFile.setPayeeId(adjustmentRecord.getPAYE_ID());
 		borAdjustmentFile.setPayeeName(adjustmentRecord.getPAYE_NM());
@@ -659,7 +662,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setClaimTransactionType("A");
 		borFileList.add(borAdjustmentFile);
 //		logger.info(borAdjustmentFile);
-		logger.info("Adj Scenario 5 written in BOR File");
+		logger.info("Adj Scenario 5 written in BOR File - A");
 		return borFileList;
 	}
 	
@@ -711,7 +714,7 @@ public class TestScenariosApp {
 		borAdjustmentFile.setClaimTransactionType("P");
 		borFileList.add(borAdjustmentFile);
 //		logger.info(borAdjustmentFile);
-		logger.info("Adj Scenario 6 written in BOR File");
+		logger.info("Adj Scenario 6 written in BOR File - P");
 		return borFileList;
 	}
 }

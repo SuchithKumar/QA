@@ -82,6 +82,18 @@ public class HelperClassApp {
 		return borFileName;
 	}
 	
+	public static String getTodaysDateFake(){
+//		Date d = new Date();
+//		Calendar cal = Calendar.getInstance(Locale.US);
+//		cal.setTime(d);
+//		TimeZone tz = TimeZone.getTimeZone("America/Los_Angeles");
+//		cal.setTimeZone(tz);
+//		
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yy");
+		String send = "25-JUL-19";
+//		System.out.println(dateFormat.format(d).toUpperCase());
+		return send;
+	}
 	public static String getTodaysDate(){
 		Date d = new Date();
 		Calendar cal = Calendar.getInstance(Locale.US);
@@ -93,7 +105,6 @@ public class HelperClassApp {
 //		System.out.println(dateFormat.format(d).toUpperCase());
 		return dateFormat.format(d).toUpperCase();
 	}
-	
 	public static String getLastYearsDate(){
 		Date d = new Date();
 		Calendar cal = Calendar.getInstance(Locale.US);

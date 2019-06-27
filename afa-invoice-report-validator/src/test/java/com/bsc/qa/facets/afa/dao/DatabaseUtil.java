@@ -31,7 +31,7 @@ public class DatabaseUtil {
 	 */
 	private Map<String,FrontPage> frontPageDBMap;
 	private Map<String,List<ClaimsActivitySummary>> claimsActivitySummaryDBMap;
-	private List<MemberDetails> memberDetailsDBList;
+	private Map<String,List<MemberDetails>> memberDetailsDBMap;
 	private List<PlanDetails> planDetailsDBList;
 	private Map<String,List<ShieldSaving>> shieldSavingDBMap;
 	private Set<String> inputInvoiceNoSet = AfaInvoiceReportReader.getInputSet();
@@ -148,10 +148,9 @@ public class DatabaseUtil {
 		return claimsActivitySummaryDBMap;
 	}
 
-	public List<MemberDetails> getMemberDetails() {
-		memberDetailsDBList = new ArrayList<MemberDetails>();
+	public Map<String,List<MemberDetails>> getMemberDetails() {
+		memberDetailsDBMap = new HashMap<String, List<MemberDetails>>();
 		for(String invoiceId:inputInvoiceNoSet){
-		MemberDetails memberDetails = new MemberDetails();
 		SQLQuery query = session
 				.createSQLQuery("SELECT DISTINCT GROUPNAME,GROUPBILLINGID,CLAIMSCYCLE,BILDUEDATE,INVOICENO,GROUPIDNAME,BILLINGCATEGORY, PLANID,ClASSID,SUBSCRIBERID,SSN,SUBSCRIBERNAME,PATIENT_NAME,RELATIONSHIP,DEPT,CLAIMID,    				 NVL(CHECKNUMBER,0) AS CHECKNUMBER,      			 PAIDDATE,FROMDATE,TODATE,PAYEENAME,PAYEEID,COVERAGE,  				 ('$'||(SUM(NVL(DEDUCTIBLE,0)))) AS DEDUCTIBLE,('$'||(SUM(NVL(COINSURANCE,0)))) AS COINSURANCE,('$'||(SUM(NVL(COPAY,0)))) AS COPAY, 				 ('$'||(SUM(NVL(MedicalAmount,0))-SUM(NVL(Interestamount,0))-SUM(NVL(BlueCardAccessFees,0)))) AS MEDICAL ,  				 ('$'||SUM(NVL(Costcontainment,0))) As Costcontainment,   				 ('$'||SUM(NVL(Interestamount,0))) As Interest,  				 ('$'||SUM(NVL(DentalAmount,0))) As Dental, ('$'||SUM(NVL(PharmacyAmount,0))) AS Pharmacy,('$'||SUM(NVL(BlueCardAccessFees,0))) AS BlueCard,('$'||SUM(NVL(StopLossAdvancedFunding,0))) AS StopLoss,  				 ('$'||SUM(NVL(HRA,0))) AS HRA,  				 ('$'||SUM(NVL(TotalClaims,0))) AS TotalPaid      			 FROM      			 (     			 SELECT DISTINCT      			 AFAI.AFAI_NAME AS GROUPNAME,  				 AFAI.AFAI_ID AS GROUPBILLINGID,  				 ((TO_CHAR(INPS.BLPS_FNDG_FROM_DT,'MM/DD/YYYY'))||'-'||(TO_CHAR(INPS.BLPS_FNDG_THRU_DT,'MM/DD/YYYY'))) AS CLAIMSCYCLE,  				 TO_CHAR(INID.BLBL_DUE_DT,'MM/DD/YYYY') as BILDUEDATE,  				 INID.BLIV_ID AS INVOICENO,  				 INPS.GRGR_ID ||'/'|| GRGR.GRGR_NAME AS GROUPIDNAME,  				 CASE WHEN GRPATRB.ATRB_VAL_TXT IS NULL THEN 'XXX' ELSE GRPATRB.ATRB_VAL_TXT END AS BILLINGCATEGORY,  				 INPS.CSPI_ID AS PLANID,  				 CSPI.CSCS_ID AS ClASSID,  				 INPS.SBSB_ID AS SUBSCRIBERID,  				 MEME.MEME_SSN AS SSN,  				 ((INPS.SBSB_LAST_NAME)||' '||(INPS.SBSB_FIRST_NAME)) AS SUBSCRIBERNAME,  				 ((MEME.MEME_LAST_NAME)||' '||(MEME.MEME_FIRST_NAME)) AS PATIENT_NAME,  				 CASE WHEN INPS.MEME_REL='M' THEN 'SELF'           		 WHEN INPS.MEME_REL IN ('D','S') THEN 'DEPENDENT'       	   		 WHEN INPS.MEME_REL IN ('H','W') THEN 'SPOUSE'           		 ELSE 'OTHER' END AS RELATIONSHIP,  				 NVL(SBEM.SBEM_DEPT,' ') AS DEPT,  				 CASE WHEN (BLXP.BLXP_ACCT_CAT IN ('CCFA','CCFF','MEDF','HRAF','HRAA','CCMF','MEDR','COBA','COBF') AND INPS.BLPS_SOURCE='4') THEN ROW_TABLE1.OLDCLMID           		 ELSE INPS.CLCL_ID END AS CLAIMID,   				 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DENT','DRUG')) THEN TO_NUMBER(PMTHIST.CHK_NBR_TXT)           		 WHEN (BLXP.BLXP_ACCT_CAT IN ('CCFA','CCFF','MEDF','HRAF','HRAA','CCMF','MEDR','COBA','COBF') AND INPS.BLPS_SOURCE='4') THEN ROW_TABLE1.EXTCKCKNO           		 ELSE  ROW_TABLE.CKCKNO END AS CHECKNUMBER,  				 (TO_CHAR(INPS.BLPS_PAID_DT,'MM/DD/YYYY')) as PAIDDATE,    				 MIN(TO_CHAR(INPS.BLPS_FROM_DT,'MM/DD/YYYY')) OVER (PARTITION BY INPS.BLIV_ID) AS FROMDATE,  			 MAX(TO_CHAR(INPS.BLPS_TO_DT,'MM/DD/YYYY')) OVER (PARTITION BY INPS.BLIV_ID) AS TODATE,  	 			 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DENT','DRUG')) THEN PMTHIST.PAYE_NM           		 WHEN (ROW_TABLE.PAYEEIND='P' OR ROW_TABLE1.EXTPAYEEIND ='P') THEN ROW_TABLE.PRPRNAME           		 WHEN (ROW_TABLE.PAYEEIND='S' OR ROW_TABLE1.EXTPAYEEIND ='S') THEN ((INPS.SBSB_LAST_NAME)||' '||(INPS.SBSB_FIRST_NAME))           		 ELSE 'NOT ASSIGNED' END AS PAYEENAME,                        			 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DENT','DRUG')) THEN PMTHIST.PAYE_ID           		 WHEN (ROW_TABLE.PAYEEIND='P' OR ROW_TABLE1.EXTPAYEEIND ='P') THEN ROW_TABLE.PAYEEID      	   		 WHEN (ROW_TABLE.PAYEEIND='S' OR ROW_TABLE1.EXTPAYEEIND ='S') THEN INPS.SBSB_ID      	   		 ELSE ' ' END AS PAYEEID,     			 CASE WHEN (INPS.BLPS_SOURCE ='1'  OR BLXP.BLXP_ACCT_CAT IN ('CCFA','CCFF','MEDF','HRAF','HRAA','CCMF','MEDR','COBA','COBF') AND INPS.BLPS_SOURCE='4') THEN 'HEALTH'      	  		 WHEN BLXP.BLXP_ACCT_CAT IN ('DRUG','DRUF') THEN 'PHARMACY'           		 WHEN BLXP.BLXP_ACCT_CAT IN ('DENT','DENF') THEN 'DENTAL'      	   		 ELSE ' ' END AS COVERAGE,      			 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DENT','DRUG')) THEN PMTHIST.DED_AMT           			   WHEN  INPS.BLPS_SOURCE ='1'  THEN ((SUM(CASE WHEN ROW_TABLE.CDMLCLMID = INPS.CLCL_ID THEN ROW_TABLE.DEDAMT ELSE 0 END) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT))-                                              (SUM(CASE WHEN ROW_TABLE.CDMLCLMID = ROW_TABLE.ADJCLMID THEN ROW_TABLE.DEDAMT ELSE 0 END) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT)))                                               END AS DEDUCTIBLE  ,    			 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DENT','DRUG')) THEN PMTHIST.COINS_AMT  			   		   WHEN  INPS.BLPS_SOURCE ='1' THEN ((SUM(CASE WHEN ROW_TABLE.CDMLCLMID = INPS.CLCL_ID THEN  ROW_TABLE.COINSAMT ELSE 0 END) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT)) -                                             (SUM(CASE WHEN ROW_TABLE.CDMLCLMID =ROW_TABLE.ADJCLMID THEN ROW_TABLE.COINSAMT ELSE 0 END) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT)))                                            END AS COINSURANCE,      			 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DENT','DRUG')) THEN PMTHIST.COPAY_AMT           			   WHEN  INPS.BLPS_SOURCE ='1' THEN ((SUM(CASE WHEN ROW_TABLE.CDMLCLMID = INPS.CLCL_ID THEN ROW_TABLE.COPAYAMT ELSE 0 END) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT)) -                                             (SUM(CASE WHEN ROW_TABLE.CDMLCLMID = ROW_TABLE.ADJCLMID THEN  ROW_TABLE.COPAYAMT ELSE 0 END) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT)))                                            END AS COPAY,  				 CASE WHEN (INPS.BLPS_SOURCE ='1' OR BLXP.BLXP_ACCT_CAT IN ('COBA','COBF','MEDF','MEDR','CCMD')) THEN (SUM(INPS.BLPS_AMT) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT,INPS.BLPS_SOURCE)) END AS MedicalAmount,  				 CASE WHEN (BLXP.BLXP_ACCT_CAT IN ('CCFA','CCFF') AND INPS.BLPS_SOURCE='4') THEN (SUM(INPS.BLPS_AMT) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT,INPS.BLPS_SOURCE)) END AS Costcontainment,      			 (SUM(INPS.BLPS_INT_AMT) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT)) AS Interestamount,  				 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DENT','DENF')) THEN (SUM(INPS.BLPS_AMT) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT,INPS.BLPS_SOURCE)) END AS DentalAmount,  				 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('DRUG','DRUF')) THEN (SUM(INPS.BLPS_AMT) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT,INPS.BLPS_SOURCE)) END AS PharmacyAmount,  			 CASE WHEN INPS.BLPS_SOURCE ='1' THEN (SUM(INPS.BLPS_ITS_FEE) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT,INPS.BLPS_SOURCE)) END AS BlueCardAccessFees,  				 ((-1)*(SUM(INPS.BLPS_SSL_EXC_AMT) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT,INPS.BLPS_SOURCE))) AS StopLossAdvancedFunding,  				 CASE WHEN (INPS.BLPS_SOURCE ='4' AND BLXP.BLXP_ACCT_CAT IN ('HRAA','HRAF')) THEN (SUM(INPS.BLPS_HSA_AMT) OVER (PARTITION BY INPS.BLIV_ID,INPS.CLCL_ID,GRPATRB.ATRB_VAL_TXT)) END AS HRA,  				 (SUM(INPS.BLPS_AMT+INPS.BLPS_HSA_AMT+INPS.BLPS_ITS_FEE-INPS.BLPS_SSL_EXC_AMT) OVER (PARTITION BY INPS.BLIV_ID,GRPATRB.ATRB_VAL_TXT,INPS.CLCL_ID,INPS.BLPS_SOURCE)) AS TotalClaims      			 FROM FC_CMC_AFAI_INDIC AFAI  				 INNER JOIN FC_CDS_INID_INVOICE INID ON AFAI.AFAI_CK=INID.AFAI_CK  			 INNER JOIN FC_CDS_INPS_PYMT_DTL INPS ON INID.BLIV_ID=INPS.BLIV_ID      			 LEFT OUTER JOIN FC_CMC_MEME_MEMBER MEME ON INPS.SBSB_CK=MEME.SBSB_CK      			 LEFT OUTER JOIN FC_CMC_BLXP_EXT_PYMT BLXP ON BLXP.BLXP_CLCL_ID=INPS.CLCL_ID   				 LEFT OUTER JOIN FC_CMC_SBEM_EMPLOY SBEM ON INPS.SBSB_CK=SBEM.SBSB_CK AND SBEM.SBEM_EFF_DT = (SELECT MAX(B.SBEM_EFF_DT) FROM FACETS.CMC_SBEM_EMPLOY B WHERE B.SBSB_CK = SBEM.SBSB_CK AND INPS.BLPS_PAID_DT BETWEEN B.SBEM_EFF_DT AND B.SBEM_TERM_DT)  				 LEFT OUTER JOIN FC_CMC_GRGR_GROUP GRGR ON INPS.GRGR_ID=GRGR.GRGR_ID  				 LEFT OUTER JOIN FC_CMC_CSPI_CS_PLAN CSPI ON GRGR.GRGR_CK=CSPI.GRGR_CK AND CSPI.CSPI_ID=INPS.CSPI_ID  				 LEFT OUTER JOIN CU_CDM_GRP_STRUCT_MAIN GRPSTRT ON INPS.GRGR_CK=GRPSTRT.GRP_CK AND INPS.CSPI_ID=GRPSTRT.PLN_ID AND CSPI.CSCS_ID=GRPSTRT.CLS_ID  				 LEFT OUTER JOIN CU_CDM_GRP_STRUCT_ATRB GRPATRB ON GRPSTRT.GRP_STRUCT_CK=GRPATRB.GRP_STRUCT_CK AND GRPATRB.ATRB_NM='CBC'  				 LEFT OUTER JOIN CU_ARGUS_DBP_AFA_PMT_HIST PMTHIST ON BLXP.BLXP_CLCL_ID=PMTHIST.CLM_ID    			 LEFT OUTER JOIN (SELECT DISTINCT SUM(DED_AMT) AS DEDAMT, SUM(COINS_AMT) AS COINSAMT,SUM(COPAY_AMT) AS COPAYAMT , CLCLCLMID,ADJCLMID,CDMLCLMID,CLCKCLMID,CKCKNO,PAYEEIND,PRPRNAME,PAYEEID  	                   			 FROM (SELECT distinct                       			 CLCL.CLCL_ID AS CLCLCLMID,CLCL.CLCL_ID_ADJ_FROM AS ADJCLMID, CDML.CLCL_ID AS CDMLCLMID,CLCK.CLCL_ID AS CLCKCLMID, CDML.CDML_DED_AMT AS DED_AMT,CDML.CDML_COINS_AMT AS COINS_AMT,CDML.CDML_COPAY_AMT AS COPAY_AMT,CKCK.CKCK_CK_NO AS CKCKNO,                       			 CLCK.CLCK_PAYEE_IND AS PAYEEIND,PRPR.PRPR_NAME AS PRPRNAME, CLCK.CLCK_PAYEE_PR_ID AS PAYEEID,                       			 ROW_NUMBER() OVER (PARTITION BY CDML.CLCL_ID,CDML.CDML_DED_AMT,CDML.CDML_COINS_AMT,CDML.CDML_COPAY_AMT ORDER BY CLCK.CLCK_PAYEE_IND DESC) AS ROW_NUM1                      			 FROM FC_CDS_INPS_PYMT_DTL INPS1                       			 LEFT OUTER JOIN FC_CMC_CLCL_CLAIM CLCL ON INPS1.CLCL_ID = CLCL.CLCL_ID                       			 LEFT OUTER JOIN FC_CMC_CDML_CL_LINE CDML ON CLCL.CLCL_ID = CDML.CLCL_ID                       			 LEFT OUTER JOIN FC_CMC_CLCK_CLM_CHECK CLCK ON CDML.CLCL_ID = CLCK.CLCL_ID                       			 LEFT OUTER JOIN FC_CMC_CKCK_CHECK CKCK ON CLCK.CKPY_REF_ID = CKCK.CKPY_REF_ID                       			 LEFT OUTER JOIN FC_CMC_PRPR_PROV PRPR ON CLCK.CLCK_PAYEE_PR_ID = PRPR.PRPR_ID WHERE INPS1.BLIV_ID IN ('"
 						+ invoiceId
@@ -162,48 +161,50 @@ public class DatabaseUtil {
 						+ "')) GROUP BY GROUPNAME,GROUPBILLINGID,CLAIMSCYCLE,BILDUEDATE,INVOICENO,GROUPIDNAME,BILLINGCATEGORY,PLANID,ClassID,SUBSCRIBERID,SSN,SUBSCRIBERNAME,PATIENT_NAME,RELATIONSHIP,Dept,CLAIMID, CHECKNUMBER,PAIDDATE,FROMDATE,TODATE,PAYEENAME,PAYEEID,COVERAGE  				 ORDER BY (CASE WHEN COVERAGE='HEALTH' THEN 1  WHEN COVERAGE='PHARMACY' THEN 2  WHEN COVERAGE='DENTAL' THEN 3 END),CLAIMID ");
 		List<Object[]> resultList = new ArrayList<Object[]>();
 		resultList = query.list();
-
+		List<MemberDetails> memberDetailsList = new ArrayList<MemberDetails>();
 		for (Object[] memberDetailsData : resultList) {
-			memberDetails.setGroupName((String) memberDetailsData[0]);
-			memberDetails.setGroupBillingId((String) memberDetailsData[1]);
-			memberDetails.setClaimsCycle((String) memberDetailsData[2]);
-			memberDetails.setBillDueDate((String) memberDetailsData[3]);
-			memberDetails.setInvoiceNo((String) memberDetailsData[4]);
-			memberDetails.setGroupIdName((String) memberDetailsData[5]);
-			memberDetails.setBillingCategory((String) memberDetailsData[6]);
-			memberDetails.setPlanId((String) memberDetailsData[7]);
-			memberDetails.setClassId((String) memberDetailsData[8]);
-			memberDetails.setSubscriberId((String) memberDetailsData[9]);
-			memberDetails.setSsn((String) memberDetailsData[10]);
-			memberDetails.setSubscriberName((String) memberDetailsData[11]);
-			memberDetails.setPatientName((String) memberDetailsData[12]);
-			memberDetails.setRelationship((String) memberDetailsData[13]);
-			memberDetails.setDept((String) memberDetailsData[14]);
-			memberDetails.setClaimId((String) memberDetailsData[15]);
-			memberDetails.setCheckNumber((BigDecimal) memberDetailsData[16]);
-			memberDetails.setPaidDate((String) memberDetailsData[17]);
-			memberDetails.setFromDate((String) memberDetailsData[18]);
-			memberDetails.setToDate((String) memberDetailsData[19]);
-			memberDetails.setPayeeName((String) memberDetailsData[20]);
-			memberDetails.setPayeeId((String) memberDetailsData[21]);
-			memberDetails.setCoverage((String) memberDetailsData[22]);
-			memberDetails.setDeductible((String) memberDetailsData[23]);
-			memberDetails.setCoinsurance((String) memberDetailsData[24]);
-			memberDetails.setCopay((String) memberDetailsData[25]);
-			memberDetails.setMedical((String) memberDetailsData[26]);
-			memberDetails.setCostContainment((String) memberDetailsData[27]);
-			memberDetails.setInterest((String) memberDetailsData[28]);
-			memberDetails.setDental((String) memberDetailsData[29]);
-			memberDetails.setPharmacy((String) memberDetailsData[30]);
-			memberDetails.setBluecard((String) memberDetailsData[31]);
-			memberDetails.setStoploss((String) memberDetailsData[32]);
-			memberDetails.setHra((String) memberDetailsData[33]);
-			memberDetails.setTotalPaid((String) memberDetailsData[34]);
+			MemberDetails memberDetails = new MemberDetails();
+			memberDetails.setGroupName(String.valueOf(memberDetailsData[0]).trim());
+			memberDetails.setGroupBillingId(String.valueOf(memberDetailsData[1]).trim());
+			memberDetails.setClaimsCycle(String.valueOf(memberDetailsData[2]).trim());
+			memberDetails.setBillDueDate(String.valueOf(memberDetailsData[3]).trim());
+			memberDetails.setInvoiceNo(String.valueOf(memberDetailsData[4]).trim());
+			memberDetails.setGroupIdName(String.valueOf(memberDetailsData[5]).trim());
+			memberDetails.setBillingCategory(String.valueOf(memberDetailsData[6]).trim());
+			memberDetails.setPlanId(String.valueOf(memberDetailsData[7]).trim());
+			memberDetails.setClassId(String.valueOf(memberDetailsData[8]).trim());
+			memberDetails.setSubscriberId(String.valueOf(memberDetailsData[9]).trim());
+			memberDetails.setSsn(String.valueOf(memberDetailsData[10]).trim());
+			memberDetails.setSubscriberName(String.valueOf(memberDetailsData[11]).trim());
+			memberDetails.setPatientName(String.valueOf(memberDetailsData[12]).trim());
+			memberDetails.setRelationship(String.valueOf(memberDetailsData[13]).trim());
+			memberDetails.setDept(String.valueOf(memberDetailsData[14]).trim());
+			memberDetails.setClaimId(String.valueOf(memberDetailsData[15]).trim());
+			memberDetails.setCheckNumber((BigDecimal)memberDetailsData[16]);
+			memberDetails.setPaidDate(String.valueOf(memberDetailsData[17]).trim());
+			memberDetails.setFromDate(String.valueOf(memberDetailsData[18]).trim());
+			memberDetails.setToDate(String.valueOf(memberDetailsData[19]).trim());
+			memberDetails.setPayeeName(String.valueOf(memberDetailsData[20]).trim());
+			memberDetails.setPayeeId(String.valueOf(memberDetailsData[21]).trim());
+			memberDetails.setCoverage(String.valueOf(memberDetailsData[22]).trim());
+			memberDetails.setDeductible(String.valueOf(memberDetailsData[23]).trim());
+			memberDetails.setCoinsurance(String.valueOf(memberDetailsData[24]).trim());
+			memberDetails.setCopay(String.valueOf(memberDetailsData[25]).trim());
+			memberDetails.setMedical(String.valueOf(memberDetailsData[26]).trim());
+			memberDetails.setCostContainment(String.valueOf(memberDetailsData[27]).trim());
+			memberDetails.setInterest(String.valueOf(memberDetailsData[28]).trim());
+			memberDetails.setDental(String.valueOf(memberDetailsData[29]).trim());
+			memberDetails.setPharmacy(String.valueOf(memberDetailsData[30]).trim());
+			memberDetails.setBluecard(String.valueOf(memberDetailsData[31]).trim());
+			memberDetails.setStoploss(String.valueOf(memberDetailsData[32]).trim());
+			memberDetails.setHra(String.valueOf(memberDetailsData[33]).trim());
+			memberDetails.setTotalPaid(String.valueOf(memberDetailsData[34]).trim());
+			memberDetailsList.add(memberDetails);
+			System.out.println(memberDetails);
 		}
-		memberDetailsDBList.add(memberDetails);
-		System.out.println(memberDetails);
+		memberDetailsDBMap.put(invoiceId, memberDetailsList);
 		}
-		return memberDetailsDBList;
+		return memberDetailsDBMap;
 	}
 
 	public Map<String,List<ShieldSaving>> getShieldSaving() {

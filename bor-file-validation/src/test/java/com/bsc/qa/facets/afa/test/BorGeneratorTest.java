@@ -40,7 +40,6 @@ public class BorGeneratorTest {
 	String oraclePassword = decoder.decryptValue(System.getenv("ORACLE_PASSWORD"));
 	String oracleServer = System.getenv("ORACLE_SERVER");
 	String oraclePort = System.getenv("ORACLE_PORT");
-	
 	String oracleDB = System.getenv("ORACLE_DB");
 	String oracleUrl = "jdbc:oracle:thin:@" + oracleServer + ":" + oraclePort + ":" + oracleDB ;
 	String destFolder = System.getenv("BOR_DEST_PATH");
